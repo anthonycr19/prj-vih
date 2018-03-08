@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_tags %}
+{% load atencion_tags %}
+{% block title %}Registrar Egreso{% endblock %}
+{% block container %}
+  <div id="app" class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">REGISTRAR EGRESO</div>
+        <div class="panel-body">
+          {% include 'egreso/partials/datos_paciente.html' %}
+          <form method="post">
+            {% csrf_token %}
+            {{ form.atencion }}
+            <div class="panel panel-primary">
+              <div class="panel-heading">Registrar Egreso</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="col-lg-4">
+                      {% field form.tipo_egreso%}
+                    </div>
+                    <div class="col-lg-4">
+                      {% field form.numero_episodio %}
+                    </div>
+                    <div class="col-lg-4">
+                        {% field form.fecha_egreso is_datepicker=True %}
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="col-lg-8">
+                      {% field form.causa_fallecimiento %}
+                    </div>
+                    <div class="col-lg-4">
+                      {% field form.lugar_fallecimiento %}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-lg-4">
+                        <button type="submit" class="btn btn-primary"><span class="fa fa-floppy-o"></span>&nbsp;Registrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="panel panel-primary">
+            <div class="panel-heading">Historial</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <table class="table table-striped table-bordered" id="tbDatosFamiliares">
+                    <thead>
+                    <tr>
+                      <th class="col-lg-2">Tipo Egreso</th>
+                      <th class="col-lg-2">Num. Episodio</th>
+                      <th class="col-lg-2">Fecha Egreso</th>
+                      <th class="col-lg-3">Causa de Fallecimiento</th>
+                      <th class="col-lg-3">Lugar de Fallecimiento</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for egreso in historial_egreso %}
+                      <tr>
+                        <td>{{ egreso.get_tipo_egreso_display }}</td>
+                        <td>{{ egreso.get_numero_episodio_display }}</td>
+                        <td>{{ egreso.fecha_egreso|date:"d/m/Y" }}</td>
+                        <td>{{ egreso.causa_fallecimiento }}</td>
+                        <td>{{ egreso.get_lugar_fallecimiento_display }}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock container %}
+
+{% block javascript %}
+  <script>
+    $(".dateinput").datepicker({
+  changeMonth: true,
+  changeYear: true,
+  dateFormat: "dd/mm/yy",
+});
+  </script>
+{% endblock javascript %}
+
+
+

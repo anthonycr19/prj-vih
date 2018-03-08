@@ -1,0 +1,28 @@
+{% load form_tags %}
+<div id="app" class="row">
+  <div class="col-lg-12">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.atencion }}
+      <div class="panel panel-primary">
+        <div class="panel-heading">Dx y Tto Gestión</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              {% field form.fur datepicker=True %}
+              {% field form.fpp datepicker=True %}
+              {% field form.edad %}
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-primary"><span class="fa fa-floppy-o"></span>&nbsp;Registrar</button>
+        </div>
+      </div>
+    </form>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Wawared</div>
+      <div class="panel-body"></div>
+    </div>
+  </div>
+</div>

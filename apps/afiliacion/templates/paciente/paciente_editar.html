@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load form_tags static %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+{% block title %} Actualizar Registro Paciente {% endblock %}
+{% block container %}
+<form method="post" class="form-horizontal">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="row">
+        <span class="panel-title pull-left">Afiliación: Actualizar Registro</span>
+        <div class="pull-right">
+          <div class="btn-group" role="group">
+            <input class="btn btn-small btn-success" type="submit" value="Guardar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% csrf_token %}
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Datos de Domicilio Actual</span>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-12">
+          <div class="col-md-3 pr3">
+            {% field form.residencia_actual_pais %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.residencia_actual_departamento %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.residencia_actual_provincia %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.residencia_actual_distrito %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.centro_poblado_actual %}
+          </div>
+          <div class="col-md-4 pr3">
+            {% field form.direccion_actual %}
+          </div>
+          <div class="col-md-5 pr3">
+            {% field form.referencia_actual %}
+          </div>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="paciente-editar-contenedor-google">
+                <iframe id="ifrCoordenada" class="paciente-editar-coordenada-google" src=""></iframe>
+              </div>
+            </div>
+            <div class="row col-md-2">
+              <div class="col-md-12">  {% field form.latitud %}</div>
+              <div class="col-md-12">  {% field form.longitud %}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title tituloTabla pull-left">Datos Personales</span>
+        </div>
+      </div>
+      <div class="panel-body">
+        <input type="hidden" name="id_paciente" id="id_paciente" value="{{ paciente.paciente}}">
+        <div class="col-md-12">
+          <div class="col-md-3 pr3">
+            {% if paciente.foto %}
+             <img src="data:image/png;base64,{{paciente.foto}}" class="img-responsive img-rounded" alt="Paciente" style="margin-left: auto; margin-right: auto; width: 60%; display: block;" />
+            {% else %}
+             <img src="{% static 'img/paciente.jpg' %}" class="img-responsive img-rounded" alt="Paciente" style="margin-left: auto; margin-right: auto; width: 60%; display: block;"/>
+            {% endif %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.tipo_documento  %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.numero_documento  %}
+          </div>
+
+          <div class="col-md-3 pr3">
+            {% field form.apellido_paterno %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.apellido_materno %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.nombres %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form_hce.numero_hce  %}
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-3 pr3">
+            {% field form_hce.archivo_clinico  %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.sexo  %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.estado_civil  %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.etnia %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.grado_instruccion  %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.ocupacion %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Datos Nacimiento</span>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-12">
+          <div class="col-md-3 pr3">
+            {% field form.nacimiento_pais %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.nacimiento_departamento %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.nacimiento_provincia %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.nacimiento_distrito %}
+          </div>
+          <div class="col-md-3 pr3">
+            {% field form.fecha_nacimiento %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Guardar</button>
+          </div>
+          <div class="col-md-6">
+            <a href="{% url 'afiliacion:buscar_paciente' %}" >
+            <button class="btn btn-danger btn-lg btn-block" type="button">Cancelar</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="row">
+        <span class="panel-title pull-left">Datos de Contactos Familiares</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="datos_familia"></div>
+    </div>
+  </div>
+
+{% endblock %}
+{% block javascript %}
+  <script src="{% static 'js/afiliacion/paciente-editar.js' %} "></script>
+  <script src="{% static 'js/afiliacion/ubigeo.js' %} "></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Historial de Consejerias Previas</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Nombres y Apellidos</th>
+            <th>Fech. Consejeria</th>
+            <th>Recibio Consejeria</th>
+            <th>Firmo Consejeria</th>
+            <th>Accion</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(consejeria_pre, index) in consejerias_pre">
+              <td>[[ index+1 ]]</td>
+              <td>[[ consejeria_pre.consejeria.atencion.paciente.nombres ]] [[ consejeria_pre.consejeria.atencion.paciente.apellido_paterno ]] [[ consejeria_pre.consejeria.atencion.paciente.apellido_materno ]]</td>
+              <td>[[ consejeria_pre.fecha_atencion ]]</td>
+              <td>Si</td>
+              <td v-if="consejeria_pre.consejeria_previa">Si</td>
+              <td v-else>No</td>
+              <td>
+                <button class="btn btn-primary">Ver C.I.</button>
+                <button class="btn btn-danger" v-if="consejeria_pre.fecha_atencion == hoy">Eliminar</button>
+              </td>
+            </tr>
+            <tr v-for="(consejeria_pre, index) in consejeria_datos">
+              <td>[[ index+1 ]]</td>
+              <td>[[ consejeria_pre.nombre_completo ]]</td>
+              <td>[[ consejeria_pre.fecha_consejeria ]]</td>
+              <td>Si</td>
+              <td v-if="consejeria_pre.consejeria_previa">Si</td>
+              <td v-else>No</td>
+              <td>
+                <button class="btn btn-primary">Ver C.I.</button>
+                <button class="btn btn-danger" v-if="consejeria_pre.fecha_consejeria == hoy">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

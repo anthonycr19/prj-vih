@@ -1,0 +1,42 @@
+{% load static %}
+<div class="panel panel-primary">
+  <div class="panel-heading">Registro</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form class="form-horizontal" method="post" id="frm_consejeria_pre">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Recibio Consejeria Previa</label>
+            <div class="col-sm-8">
+              <label class="radio-inline">
+                <input type="radio" name="consejeria_previa" id="id_consejeria_previa_si" value="true" v-model="consejeria_pre.consejeria_previa"> Si
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="consejeria_previa" id="id_consejeria_previa_no" value="false" v-model="consejeria_pre.consejeria_previa">No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Firmar Consentimiento Informado</label>
+            <div class="col-sm-8">
+              <label class="checkbox-inline">
+                <input type="checkbox" name="esta_consentido" id="id_esta_consentido" v-model="consejeria_pre.esta_consentido">
+                <img width="32" height="32" src="{% static "img/fingerprint.svg" %}" alt="validar" style="border-radius: 5px; border-shadow: 5px;"/>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Tipo de Poblacion</label>
+            <div class="col-sm-8">
+              <select name="tipo_poblacion" class="form-control" v-model="consejeria_pre.tipo_poblacion">
+                {% for poblacion in poblaciones %}
+                  <option value="{{ poblacion.pk }}" {% if poblacion.id == 1 %}selected{% endif %}>{{ poblacion.denominacion }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

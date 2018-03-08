@@ -1,0 +1,11 @@
+{% load form_tags static %}
+
+<form method="post" action="{% url 'afiliacion:crear_familia_paciente' id_paciente nrodoc %}" class="form-horizontal">
+  {% csrf_token %}
+  <input type="hidden" name="id_paciente" value="{{ id_paciente }}">
+  {% field form_familiar.numero_documento cols=True inline=True %}
+  {% field form_familiar.parentesco cols=True inline=True %}
+  {% field form_familiar.celular cols=True inline=True %}
+  {% field form_familiar.correo cols=True inline=True %}
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

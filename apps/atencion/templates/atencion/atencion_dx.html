@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Atención - Paciente{% endblock %}
+{% block container %}
+  <div id="app" class="row">
+    <div class="col-md-12">
+      <div class="row">
+        {% include 'afiliacion/partials/info_paciente.html' %}
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Registro de Dx y Tto</div>
+        <div class="panel-body">
+          <ul class="nav nav-tabs" role="tablist">
+            {% if tab == 'dx' %}
+              <li class="active"><a href="#" role="tab">Diagnóstico</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_definicion_url }}">Diagnóstico</a></li>
+            {% endif %}
+            {% if tab == 'tarv' %}
+              <li class="active"><a href="#" role="tab">Tratamiento (TARV)</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_tarv_url }}">Tratamiento (TARV)</a></li>
+            {% endif %}
+            {% if tab == 'gestacion' %}
+              <li class="active"><a href="#" role="tab">Gestación</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_g_url }}">Gestación</a></li>
+            {% endif %}
+            {% if tab == 'terapia' %}
+              <li class="active"><a href="#" role="tab">Terapia Preventiva</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_terapia_url }}">Terapia Preventiva</a></li>
+            {% endif %}
+            {% if tab == 'ram' %}
+              <li class="active"><a href="#" role="tab">RAM</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_ram_url }}">RAM</a></li>
+            {% endif %}
+            {% if tab == 'ex-aux' %}
+              <li class="active"><a href="#" role="tab">Exámenes Auxiliares</a></li>
+            {% else %}
+              <li><a href="{{ atencion.get_atencion_ex_aux_url }}">Exámenes Auxiliares</a></li>
+            {% endif %}
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="dx">
+              {% if tab == 'dx' %}
+                {% include 'atencion/partials/dx.html' %}
+              {% elif tab == 'tarv' %}
+                {% include 'atencion/partials/tarv.html' %}
+              {% elif tab == 'gestacion' %}
+                {% include 'atencion/partials/gestacion.html' %}
+              {% elif tab == 'terapia' %}
+                {% include 'atencion/partials/terapia.html' %}
+              {% elif tab == 'ex-aux' %}
+                {% include 'atencion/partials/ex_auxiliar.html' %}
+              {% elif tab == 'ram' %}
+                {% include 'atencion/partials/ram.html' %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascript %}
+  <script>
+    let paciente = "{{ atencion.paciente.pk }}";
+    let servicio = "{{ atencion.cita_data.ups.descripcion|safe }}";
+  </script>
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static "js/atencion/atencion_info.js" %}"></script>
+  {% if tab == 'dx' %}
+    <script src="{% static "js/atencion/diagnostico.js" %}"></script>
+  {% elif tab == 'tarv' %}
+    <script src="{% static "js/atencion/tratamiento.js" %}"></script>
+  {% elif tab == 'gestacion' or tab == 'terapia' %}
+    <script src="{% static "js/atencion/gestacion.js" %}"></script>
+  {% elif tab == 'ex-aux' %}
+    <script src="{% static "js/atencion/ex_aux.js" %}"></script>
+  {% elif tab == 'ram' %}
+    <script src="{% static "js/atencion/ram.js" %}"></script>
+  {% endif %}
+{% endblock %}

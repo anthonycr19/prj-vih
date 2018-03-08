@@ -1,0 +1,45 @@
+from django.conf.urls import url, include
+
+from apps.servicios.api.views import BuscarEstablecimientoView, \
+    ObtenerEstablecimientosTotalesView
+from . import views
+urlpatterns = [
+    url(r'^v1/', include([
+        url(r'listar-brigada/$', views.BrigadaDataView.as_view(), name='listar-brigada'),
+        url(r'listar-lugar-abordaje/$', views.LugarAbordajeView.as_view(), name='lugar_abordaje'),
+        url(r'guardar-brigada/$', views.UsuarioBrigadaCreateView.as_view(), name='guardar_brigada'),
+        url(r'at-lugar-abordaje/$', views.ATlugarAbordajeView.as_view(), name='at_lugar_abordaje'),
+        url(r'listar-distritos/(?P<ubig_prov>\d+)/$', views.DistritoDataView.as_view(), name='listar_distrito'),
+        url(r'listar-provincias/(?P<ubig_departamento>\d+)/$', views.ProvinciaDataView.as_view(),
+            name='listar_distrito'),
+        url(r'crear-lugar-abordaje/$', views.ATLugarAbordajeCreateView.as_view(), name='crear_lugar_abordaje'),
+        url(r'buscar-paciente-vih/(?P<numero_documento>[\w-]+)/(?P<tipo_documento>[\w-]+)/$',
+            views.BuscarPaciente.as_view(), name='buscar_paciente'),
+        url(r'crear-consejeria-examen/$', views.ConsejeriaExamenCreateView.as_view(), name='crear_consejeria_examne'),
+        url(r'examenesminsa/$', views.ExamenesView.as_view(), name='examenes'),
+        url(r'listar-poblacion/$', views.PoblacionDataView.as_view(), name='examenes'),
+        url(r'guardar-paciente-poblacion/$', views.PacientePoblacionCreateView.as_view(),
+            name='guardar_brigada'),
+        url(r'laboratorio/crear-examen-resultado/', views.CreateExamenResultadoListAPIView.as_view(),
+            name='crear_examen_resultado'),
+        url(r'listar-examenes-paciente/(?P<paciente>[\w-]+)/$', views.ListExamenesApiView.as_view(),
+            name='listar-examenes-pacientes'),
+        url(r'busqueda-examen-qr/(?P<codigo_qr>[\w-]+)/$', views.BusquedaExamenQrApiView.as_view(),
+            name='busqueda_examen_qr'),
+        url(r'laboratorio/editar-examen-resultado/(?P<id>\d+)/$', views.UpdateExamenResultadoListAPIView.as_view(),
+            name='editar_examen_resultado'),
+        url(r'busqueda-resultado-examen/(?P<id_examen>\d+)/$', views.BusquedaExamenResultadoView.as_view(),
+            name='busqueda_resultado_examen'),
+        url(r'crear-nuevo-paciente/$', views.PacienteCreateView.as_view(), name='crear_nuevo_paciente'),
+        url(r'obtener-ultima-brigada/(?P<usuario>[\w-]+)/$', views.ObtenerBrigadaView.as_view(),
+            name='obtener_ultima_brigada'),
+        url(r'descargar_tamizajes/(?P<id_brigada>\d+)/$', views.ObtenerTamizajeView.as_view(),
+            name='obtener_tamizaje'),
+        url(r'sincronizar_datos/$', views.SincronizarDatosView.as_view(),
+            name='obtener_tamizaje'),
+        url(r'descargar_establecimiento/$', ObtenerEstablecimientosTotalesView.as_view(),
+            name='descargar_establecimiento'),
+        url(r'buscar_establecimiento/$', BuscarEstablecimientoView.as_view(),
+            name='buscar_establecimiento'),
+    ], namespace='v1')),
+]

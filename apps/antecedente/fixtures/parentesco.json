@@ -1,0 +1,44 @@
+[
+{
+  "model": "antecedente.parentesco",
+  "pk": 1,
+  "fields": {
+    "descripcion": "Padre"
+  }
+},
+{
+  "model": "antecedente.parentesco",
+  "pk": 2,
+  "fields": {
+    "descripcion": "Madre"
+  }
+},
+{
+  "model": "antecedente.parentesco",
+  "pk": 3,
+  "fields": {
+    "descripcion": "Esposo"
+  }
+},
+{
+  "model": "antecedente.parentesco",
+  "pk": 4,
+  "fields": {
+    "descripcion": "Esposa"
+  }
+},
+{
+  "model": "antecedente.parentesco",
+  "pk": 5,
+  "fields": {
+    "descripcion": "Hijo"
+  }
+},
+{
+  "model": "antecedente.parentesco",
+  "pk": 6,
+  "fields": {
+    "descripcion": "Hija"
+  }
+}
+]

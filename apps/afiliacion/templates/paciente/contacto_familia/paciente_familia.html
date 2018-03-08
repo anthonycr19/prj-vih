@@ -1,0 +1,47 @@
+{% load static %}
+{% load form_tags %}
+{% block container %}
+<div class="col-md-12">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th><center>Documento</center></th>
+        <th><center>Parentesco</center></th>
+        <th><center>Nombre</center></th>
+        <th><center>Celular</center></th>
+        <th><center>Correo</center></th>
+        <th><center>Opciones</center></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include 'paciente/contacto_familia/paciente_familia_resumen.html' with data=table_data %}
+      <tr>
+        <td><center>
+          <button type="button"
+            class="btn btn-success btn-sm js-crear-contactofamiliar"
+            data-url="{% url 'afiliacion:buscar_familia_paciente' id_paciente %}">
+            <span class="fa fa-plus"></span>
+          </center></button>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="modal-contactofamiliar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/afiliacion/contacto-familia.js' %} "></script>
+{% endblock javascript %}

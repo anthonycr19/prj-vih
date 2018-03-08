@@ -1,0 +1,64 @@
+{% load static %}
+<script src="{% static "js/vue.min.js" %}"></script>
+<script src="{% static "js/vue-resource.min.js" %}"></script>
+<script>
+  String.prototype.toTitle = function () {
+    return this.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+  function template(strings, ...keys) {
+    return (function (...values) {
+      let dict = values[values.length - 1] || {};
+      let result = [strings[0]];
+      keys.forEach(function (key, i) {
+        let value = Number.isInteger(key) ? values[key] : dict[key];
+        result.push(value, strings[i + 1]);
+      });
+      return result.join('');
+    });
+  }
+  function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+  let medico = '{{ user.username }}';
+  let eess = '{{ user.current_establishment }}';
+  let apiURL = {
+    buscar_paciente: '{% url 'afiliacion:ver_paciente' %}',
+    citas: '{% url 'afiliacion:v1:afiliacion_citas' %}',
+    antecedentes: template`/atenciones/${0}/antecedentes/`,
+    atencionDX: template`/atenciones/${0}/dx/`,
+    paciente: template`/api/v1/ciudadanos/${0}/`,
+    cita: template`/api/v1/citas/${0}/`,
+    ciudadano: template`/api/v1/paciente/ver/${0}/`,
+    resultado_examen: template`/api/v1/resultados/${0}/`,
+    cies: '{% url 'afiliacion:v1:afiliacion_cies' %}',
+    cpts: '{% url 'afiliacion:v1:afiliacion_cpts' %}',
+    esquemas: '{% url 'medicamento:v1:esquemas' %}',
+    medicamentos: '{% url 'medicamento:v1:medicamentos' %}',
+    antiretrovirales: '{% url 'medicamento:v1:antiretrovirales' %}',
+    consejeriapre: '{% url 'consejeria:v1:pre_consejerias' %}',
+    consejeriapost: '{% url 'consejeria:v1:post_consejerias' %}',
+    crearconsejeriapost: '/crear-post-consejeria/',
+    editarconsejeriapost: '/editar-post-consejeria/',
+    eliminarconsejeriapost: '/eliminar-post-consejeria/',
+    laboratioresultado: '/api/v1/resultados/',
+    laboratorioexamenes: '/api/v1/examenes/',
+    listar_resultado_examen: '/listar-resultado-examen/',
+    eliminarexamen: '/eliminar-examen/',
+    eliminar_resultado_examen: '/eliminar-resultado-examen/',
+    atencion: '{% url 'atencion:atencion_index' %}'
+  };
+  let ups = [];
+  let hoy = moment().format('YYYY-MM-DD');
+  let ayer = moment().subtract(1, 'days').format('YYYY-MM-DD');
+  let dias = moment().subtract(8, 'days').format('YYYY-MM-DD');
+  $.datepicker.regional['es'] = {
+    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+    dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+    dayNamesMin: ['Do', 'Lu', 'Ma', 'Mc', 'Ju', 'Vi', 'Sa']
+  };
+  $.datepicker.setDefaults($.datepicker.regional['es']);
+</script>

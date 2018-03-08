@@ -1,0 +1,16 @@
+[
+{
+  "model": "antecedente.tipoenfermedad",
+  "pk": 1,
+  "fields": {
+    "descripcion": "Cr\u00f3nicas"
+  }
+},
+{
+  "model": "antecedente.tipoenfermedad",
+  "pk": 2,
+  "fields": {
+    "descripcion": "Oportunistas"
+  }
+}
+]

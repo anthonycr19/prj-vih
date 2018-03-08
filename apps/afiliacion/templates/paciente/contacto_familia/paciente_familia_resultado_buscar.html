@@ -1,0 +1,48 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th><center>T. Doc.</center></th>
+      <th><center>Numero</center></th>
+      <th><center>Nombres y Apellidos</center></th>
+      <th><center>Opcion</center></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if pacientes.error == 'OK' %}
+    <tr>
+      <td><center> DNI </center></td>
+      <td><center>{{ pacientes.data.numero_documento }}</center></td>
+      <td><center>{{ pacientes.data.nombres }} {{ pacientes.data.apellido_paterno }} {{ pacientes.data.apellido_materno }}</center></td>
+      <td><center>
+        <button id="js-save-familia" type="button"
+            class="btn btn-warning btn-sm"
+            data-nrodoc="{{ pacientes.data.numero_documento }}">
+          Elegir
+        </button>
+        </center>
+      </td>
+    </tr>
+  {% else %}
+    <tr>
+      <td colspan='4'> {{ pacientes.error }}</td>
+    </tr>
+  {% endif %}
+  </tbody>
+</table>
+<div id="formulario_contactofamilia"> </div>
+
+{% block javascript %}
+<script>
+  $(document).ready(function () {
+    $('#js-save-familia').click(function() {
+      var btn = $(this);
+      var nrodoc= btn.attr("data-nrodoc");
+      var id_paciente = '{{id_paciente}}';
+      $.get('/afiliacion/crear-familia-paciente/'+id_paciente+'/'+nrodoc, {
+      }, function(data) {
+        $('#formulario_contactofamilia').html(data);
+      });
+    });
+  });
+</script>
+{% endblock %}

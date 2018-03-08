@@ -1,0 +1,556 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_tags %}
+{% block css %}
+  <link href="{% static "vendor/datatables-plugins/dataTables.bootstrap.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/datatables-responsive/dataTables.responsive.css" %}" rel="stylesheet">
+{% endblock %}
+{% block container %}
+  <div id="app" class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        {% include 'afiliacion/partials/info_paciente.html' %}
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          {% if form.errors %}
+            {% for error in form.non_field_errors %}
+              <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Registro de Antecedentes</div>
+        <div class="panel-body">
+          <ul class="nav nav-tabs" role="tablist" id="tabAntecedentes">
+            <li{% if tab == 'personal' %} class="active"{% endif %}><a href="#personal" data-toggle="tab">Antecedentes Personales</a></li>
+            <li{% if tab == 'familiar' %} class="active"{% endif %}><a href="#familiar" data-toggle="tab">Antecedentes Familiares</a></li>
+            <li{% if tab == 'antirretroviral' %} class="active"{% endif %}><a href="#antirretroviral" data-toggle="tab">Terapias Antirretrovirales</a></li>
+            <li{% if tab == 'preventiva' %} class="active"{% endif %}><a href="#preventiva" data-toggle="tab">Terapias Preventivas</a></li>
+            <li{% if tab == 'vacuna' %} class="active"{% endif %}><a href="#vacuna" data-toggle="tab">Tiene Vacunas</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in {% if tab == 'personal' %} active {% endif %}" id="personal">
+              <div class="row">
+                <div class="col-lg-12">
+                  <form method="post" action=".">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">Antecedentes Personales</div>
+                      <div class="panel-body">
+                        {% csrf_token %}
+                        <input type="hidden" name="tab" value="personal"/>
+                        <div class="row">
+                          <div class="col-lg-2">Buscar CIE :</div>
+                          <div class="col-lg-4 col-lg-offset-3">
+                            <input type="text" class="form-control" name="ciePersonal" id="ciePersonal"
+                                   placeholder="Ingrese un CIE">
+                            <input type="hidden" name="idCiePersonal" id="idCiePersonal" value=""/>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            {{ per_forms.management_form }}
+                            <table class="table table-striped table-responsive">
+                              <thead>
+                              <tr>
+                                <th class="col-lg-2">Código</th>
+                                <th class="col-lg-4">Descripción</th>
+                                <th class="col-lg-2">Tipo Enfermedad</th>
+                                <th class="col-lg-2">Fec. Dx.</th>
+                                <th class="col-lg-2">Observación</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              {% for form in per_forms %}
+                                <tr>
+                                  <td>{% field form.cie label=False %}</td>
+                                  <td>
+                                    {% if forloop.counter == 1 %}
+                                      ENFERMEDAD POR EL VIH, RESULTANTE EN INFECCION POR MICOBACTERIAS
+                                    {% elif forloop.counter == 2 %}
+                                      HEPATITIS VIRAL TIPO B CRONICA, SIN AGENTE DELTA
+                                    {% elif forloop.counter == 3 %}
+                                      HIPERTENSION ESENCIAL (PRIMARIA)
+                                    {% elif forloop.counter == 4 %}
+                                      ISOSPORIASIS
+                                    {% elif forloop.last %}
+                                      [[ cie_personal ]]
+                                    {% endif %}
+                                  </td>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-md-12">{% field form.tipo_enfermedad label=False %}</div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-md-8 col-lg-offset-2">{% field form.fecha_dx label=False %}</div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-md-12">{% field form.obs label=False %}</div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              {% endfor %}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel-footer">
+                        <button class="btn btn-primary" type="submit">
+                          <span class="fa fa-floppy-o"></span>&nbsp;Registar
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">Historial</div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <table class="table table-striped table-bordered" id="tbDatosPersonales">
+                            <thead>
+                            <tr>
+                              <th class="col-lg-1">Código</th>
+                              <th class="col-lg-4">Descripción</th>
+                              <th class="col-lg-2">Tipo de Enfermedad</th>
+                              <th class="col-lg-3">Observación</th>
+                              <th class="col-lg-2">Fec. Dx</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for antper in historial_personal %}
+                              <tr>
+                                <td>{{ antper.cie }}</td>
+                                <td>{{ antper.cie_data.desc_ciex }}</td>
+                                <td>{{ antper.tipo_enfermedad }}</td>
+                                <td>{{ antper.obs }}</td>
+                                <td>{{ antper.fecha_dx }}</td>
+                              </tr>
+                            {% endfor %}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in {% if tab == 'familiar' %} active {% endif %}" id="familiar">
+              <div class="panel-body">
+                <form method="post" action=".">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">Antecedentes Familiares</div>
+                    <div class="panel-body">
+                      {% csrf_token %}
+                      <input type="hidden" name="tab" value="familiar"/>
+                      <div class="row">
+                        <div class="col-lg-3">Buscar CIE :</div>
+                        <div class="col-lg-4 col-lg-offset-3">
+                          <input type="text" class="form-control" name="cieFamiliar" id="cieFamiliar"
+                                 placeholder="Ingrese un CIE">
+                          <input type="hidden" name="idCieFamiliar" id="idCieFamiliar" value=""/>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          {{ fam_forms.management_form }}
+                          <table class="table table-responsive table-striped">
+                            <thead>
+                            <tr>
+                              <th class="col-lg-2">Código</th>
+                              <th class="col-lg-4">Descripción</th>
+                              <th class="col-lg-2">Parentesco</th>
+                              <th class="col-lg-2">Fec. Dx.</th>
+                              <th class="col-lg-2">Observación</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for form in fam_forms %}
+                              <tr>
+                                <td>{% field form.cie label=False %}</td>
+                                <td>
+                                  {% if forloop.counter == 1 %}
+                                    ENFERMEDAD POR EL VIH, RESULTANTE EN INFECCION POR MICOBACTERIAS
+                                  {% elif forloop.counter == 2 %}
+                                    HEPATITIS VIRAL TIPO B CRONICA, SIN AGENTE DELTA
+                                  {% elif forloop.counter == 3 %}
+                                    HIPERTENSION ESENCIAL (PRIMARIA)
+                                  {% elif forloop.counter == 4 %}
+                                    ISOSPORIASIS
+                                  {% elif forloop.last %}
+                                    [[ cie_familiar ]]
+                                  {% endif %}
+                                </td>
+                                <td>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      {% field form.parentesco label=False %}
+                                    </div>
+                                  </div>
+                                <td>
+                                  <div class="row">
+                                    <div
+                                        class="col-md-8 col-lg-offset-2">
+                                      {% field form.fecha_dx label=False %}
+                                    </div>
+                                  </div>
+                                <td>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      {% field form.obs label=False %}
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <button class="btn btn-primary" type="submit">
+                        <span class="fa fa-floppy-o"></span>&nbsp;Registrar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Historial</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <table class="table table-striped table-bordered" id="tbDatosFamiliares">
+                          <thead>
+                          <tr>
+                            <th class="col-lg-1">Código</th>
+                            <th class="col-lg-4">Descripción</th>
+                            <th class="col-lg-1">Parentesco</th>
+                            <th class="col-lg-4">Observación</th>
+                            <th class="col-lg-2">Fec. Dx</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for antper in historial_familiar %}
+                            <tr>
+                              <td>{{ antper.cie }}</td>
+                              <td>{{ antper.cie_data.desc_ciex }}</td>
+                              <td>{{ antper.parentesco }}</td>
+                              <td>{{ antper.obs }}</td>
+                              <td>{{ antper.fecha_dx }}</td>
+                            </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in {% if tab == 'antirretroviral' %} active {% endif %}" id="antirretroviral">
+              <div class="panel-body">
+                <form method="POST" action=".">
+                  {% csrf_token %}
+                  {{ art_form.atencion }}
+                  <input type="hidden" name="tab" value="antirretroviral"/>
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">Terapias Antirretrovirales</div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h5>Medicamentos</h5>
+                          <div class="row">
+                            <div class="col-lg-2">
+                              <label>Buscar (indicación)</label>
+                            </div>
+                            <div class="col-lg-10">
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  {% field art_form.med1 label=False %}
+                                  {{ art_form.medicamento1 }}
+                                </div>
+                                <div class="col-lg-4">
+                                  {% field art_form.med2 label=False %}
+                                  {{ art_form.medicamento2 }}
+                                </div>
+                                <div class="col-lg-4">
+                                  {% field art_form.med3 label=False %}
+                                  {{ art_form.medicamento3 }}
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  {% field art_form.med4 label=False %}
+                                  {{ art_form.medicamento4 }}
+                                </div>
+                                <div class="col-lg-4">
+                                  {% field art_form.med5 label=False %}
+                                  {{ art_form.medicamento5 }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-2">
+                              <label>Fecha de Inicio</label>
+                            </div>
+                            <div class="col-lg-3">
+                              {% field art_form.fecha_inicio label=False is_datepicker=True %}
+                            </div>
+                            <div class="col-lg-2">
+                              <label>Fecha de Fin</label>
+                            </div>
+                            <div class="col-lg-3">
+                              {% field art_form.fecha_fin label=False is_datepicker=True %}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-2">
+                              <label>Observaciones</label>
+                            </div>
+                            <div class="col-lg-10">
+                              {% field art_form.obs label=False %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <button class="btn btn-primary" type="submit">
+                        <span class="fa fa-floppy-o"></span>&nbsp;Registrar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Historial</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <table class="table table-striped table-bordered table-condensed" id="tbDatosAnti">
+                          <thead>
+                          <tr class="first_row">
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Observación</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for antper in historial_antirretroviral %}
+                            <tr>
+                              <td>{{ antper.esquema }}</td>
+                              <td>{{ antper.descripcion }}</td>
+                              <td>{{ antper.fecha_inicio|date:'d/m/Y' }}</td>
+                              <td>{{ antper.fecha_fin|date:'d/m/Y' }}</td>
+                              <td>{{ antper.obs }}</td>
+                            </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in {% if tab == 'preventiva' %} active {% endif %}" id="preventiva">
+              <div class="panel-body">
+                <form method="POST" action=".">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">Antecedentes Prevención</div>
+                    <div class="panel-body">
+                      {% csrf_token %}
+                      {{ pre_form.atencion }}
+                      <input type="hidden" value="preventiva" name="tab">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <label>¿Tuvo terapia preventiva para Tuberculosis?</label>
+                        </div>
+                        <div class="col-lg-1">
+                          {% field pre_form.tiene_terapia_tub label=False %}
+                        </div>
+                        <div class="col-lg-2">
+                          <label>Fecha Inicio</label>
+                        </div>
+                        <div class="col-lg-2">
+                          {% field pre_form.fecha_inicio_tub label=False is_datepicker=True %}
+                        </div>
+                        <div class="col-lg-2">
+                          <label>Razón</label>
+                        </div>
+                        <div class="col-lg-2">
+                          {% field pre_form.razon_cambio_tub label=False %}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <label>¿Tuvo terapia preventiva para Pneumosistis?</label>
+                        </div>
+                        <div class="col-lg-1">
+                          {% field pre_form.tiene_terapia_pne label=False %}
+                        </div>
+                        <div class="col-lg-2">
+                          <label>Fecha Inicio</label>
+                        </div>
+                        <div class="col-lg-2">
+                          {% field pre_form.fecha_inicio_pne is_datepicker=True label=False %}
+                        </div>
+                        <div class="col-lg-2">
+                          <label>Razón</label>
+                        </div>
+                        <div class="col-lg-2">
+                          {% field pre_form.razon_cambio_pne label=False %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <button class="btn btn-primary" type="submit">
+                        <span class="fa fa-floppy-o"></span>&nbsp;Registar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Historial</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <table class="table table-striped table-bordered table-condensed" id="tbDatosTer">
+                          <thead>
+                          <tr class="first_row">
+                            <th>#</th>
+                            <th>Descripción</th>
+                            <th>SI/NO</th>
+                            <th>Fecha Inicio</th>
+                            <th>Razón</th>
+                            <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for antper in historial_preventiva %}
+                            {% if antper.tiene_terapia_tub %}
+                            <tr>
+                              <td>1</td>
+                              <td>¿Tuvo terapia para Tuberculosis?</td>
+                              <td>{% if antper.tiene_terapia_tub %}SI{% else %}NO{% endif %}</td>
+                              <td>{{ antper.fecha_inicio_tub|date:'m/d/Y' }}</td>
+                              <td>{{ antper.razon_cambio_tub }}</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>¿Tuvo terapia para Pneumosistis?</td>
+                              <td>{% if antper.tiene_terapia_pne %}SI{% else %}NO{% endif %}</td>
+                              <td>{{ antper.fecha_inicio_pne|date:'m/d/Y' }}</td>
+                              <td>{{ antper.razon_cambio_pne }}</td>
+                              <td></td>
+                            </tr>
+                            {% endif %}
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in {% if tab == 'vacuna' %} active {% endif %}" id="vacuna">
+              <div class="panel-body">
+                <form method="post" action="." class="form-horizontal">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      Agregar Antecedente de Vacunas
+                      <a href="{{ calendario_inmunizacion }}" target="_blank">&nbsp;Ver Calendario&nbsp;</a>
+                    </div>
+                    <div class="panel-body">
+                      {% csrf_token %}
+                      {{ vac_form.atencion }}
+                      <input type="hidden" value="vacuna" name="tab">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          {% field vac_form.vacuna cols=True %}
+                        </div>
+                        <div class="col-lg-4">
+                          {% field vac_form.nro_dosis cols=True %}
+                        </div>
+                        <div class="col-lg-4">
+                          {% field vac_form.fecha_aplicacion cols=True is_datepicker=True %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <button class="btn btn-primary" type="submit">
+                        <span class="fa fa-floppy-o"></span>&nbsp;Registrar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Historial</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <table class="table table-striped table-bordered table-condensed" id="tbDatosTer">
+                          <thead>
+                          <tr class="first_row">
+                            <th>#</th>
+                            <th>Código</th>
+                            <th>Vacuna</th>
+                            <th>Nro. Dosis</th>
+                            <th>Fecha Aplic.</th>
+                            <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for anthis in historial_vacuna %}
+                            <tr>
+                              <td>{{ forloop.counter }}</td>
+                              <td></td>
+                              <td>{{ anthis.vacuna.codigo }}</td>
+                              <td>{{ anthis.vacuna }}</td>
+                              <td>{{ anthis.nro_dosis }}</td>
+                              <td>{{ anthis.fecha_aplicacion }}</td>
+                              <td></td>
+                            </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static "vendor/datatables-plugins/jquery.dataTables.min.js" %}"></script>
+  <script src="{% static "vendor/datatables-plugins/dataTables.bootstrap.min.js" %}"></script>
+  <script src="{% static "vendor/datatables-responsive/dataTables.responsive.js" %}"></script>
+  <script>
+    let paciente = "{{ object.paciente.pk }}";
+  </script>
+  <script src="{% static 'js/atencion/antecedentes.js' %}"></script>
+  {% if tab == 'antirretroviral' %}
+    <script src="{% static 'js/atencion/tratamiento.js' %}"></script>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,154 @@
+{% load form_tags %}
+<div id="md_consejeria_form" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Consejeria Previa - Registro</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          {% include 'afiliacion/partials/info_paciente.html' %}
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Últimos descartes</div>
+              <div class="panel-body">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Descripción de la Prueba</th>
+                    <th>Fec. Resultado</th>
+                    <th>Resultado</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr v-for="(examen, index) in examenes">
+                    <td>[[ index + 1 ]]</td>
+                    <td>[[ examen.cpt ]]</td>
+                    <td>[[ examen.fecha ]]</td>
+                    <td>[[ examen.resultado ]]</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form" method="post" action=".">
+              <div class="panel panel-primary">
+                <div class="panel-heading">Evaluación Consejería Post Test</div>
+                <div class="panel-body">
+                  {% csrf_token %}
+                  {{ form.paciente }}
+                  {{ form.cita }}
+                  {{ form.medico }}
+                  {{ form.eess }}
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      {% field form.via_transmision %}
+                    </div>
+                    <div class="form-group col-lg-6">
+                      {% field form.antecedentes %}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      <div id="div_id_tipo_transmision" class="form-group">
+                        <label for="id_tipo_transmision" class="control-label requiredField">Tipo de Transmisión<span
+                            class="asteriskField">*</span></label>
+                        <div class="controls">
+                          <select name="tipo_transmision" class="select form-control" id="id_tipo_transmision"
+                                  v-model="tipo_transmision">
+                            <option v-if="via_transmision === 'sexual'" value="HETERO">Heterosexual</option>
+                            <option v-if="via_transmision === 'sexual'" value="HOMO">Homosexual</option>
+                            <option v-if="via_transmision === 'sexual'" value="BI">Bisexual</option>
+                            <option v-if="via_transmision === 'parental'" value="TRANSFUSION">Transfusión de sangre y/o
+                              derivados
+                            </option>
+                            <option v-if="via_transmision === 'parental'" value="UDI">Compartir agujas/UDI</option>
+                            <option v-if="via_transmision === 'parental'" value="ACCIDENTE">Accidente con material
+                              contaminado
+                            </option>
+                            <option v-if="via_transmision === 'parental'" value="TRANSPLANTE">Transplante de órganos ó
+                              tejidos
+                            </option>
+                            <option v-if="via_transmision === 'parental' || via_transmision === 'sexual'"
+                                    value="NODETERMINADO">No determinado
+                            </option>
+                            <option v-else value=""></option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      {% field form.nro_parejas %}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-lg-6">
+                      {% field form.uso_preservativo %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Historial de Consejería Previa</div>
+              <div class="panel-body">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Fec. Consejería</th>
+                    <th>Tipo Trans.</th>
+                    <th>Antecedentes RSX</th>
+                    <th>Parejas</th>
+                    <th>Uso Preservativos</th>
+                    <th>Acción</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr v-for="(consejeria, index) in consejerias">
+                    <td>[[ index + 1]]</td>
+                    <td>[[ consejeria.fecha_atencion ]]</td>
+                    <td>[[ consejeria.tipo_transmision_display ]]</td>
+                    <td>[[ consejeria.antecedentes_display ]]</td>
+                    <td>[[ consejeria.nro_parejas ]]</td>
+                    <td>
+                      <span>
+                      <i v-if="consejeria.uso_preservativo" class="glyphicon glyphicon-ok"></i>
+                      <i v-else class="glyphicon glyphicon-remove"></i>
+                      </span>
+                    </td>
+                    <td>
+                      <div class="btn-group" role="group">
+                        <button class="btn btn-default">Editar</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

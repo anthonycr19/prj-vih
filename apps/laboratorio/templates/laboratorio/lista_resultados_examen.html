@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+{% block title %}Listar Resultado Examen{% endblock %}
+{% block container %}
+  <div id="app">
+    <div id="md_form_resultados" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Laboratorio - Registro de resultados</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-12">
+                {% include 'laboratorio/resultado_laboratorio_form.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="md_form_editar_resultados"  class="modal fade"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Laboratorio - Editar Resultado</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <form id="frm_editar_resultado" class="form-horizontal" method="post">
+                  <input type="hidden" v-model="laboratorio_examen" name="laboratorio_examen"/>
+                  <input type="hidden" v-model="laboratorio_resultado_examen" name="laboratorio_resultado_examen"/>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Fecha</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="id_fecha_resultado" name="fecha_resultado" v-model="fecha_resultado_editar"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Nro. Prueba</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="nro_prueba" v-model="nro_prueba">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Resultado</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" list="id_resultados" name="resultado" v-model="resultado">
+                      <datalist id="id_resultados">
+                        <option value="REACTIVO">
+                        <option value="NO REACTIVO">
+                        <option value="INDETERMINADO">
+                      </datalist>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Código de muestra</label>
+                    <div class="col-sm-8">
+                      <input name="nro_muestra" class="form-control" type="text" v-model="nro_muestra">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Observaciones</label>
+                    <div class="col-sm-8">
+                      <textarea name="observacion" class="form-control" v-model="observacion"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-8">
+                      <button type="button" class="btn btn-default" v-on:click="setResultadoGuardar($event)">Actualizar</button>
+                      <button type="button" class="btn btn-danger"  v-on:click="setLimpiarResultadoGuardar()" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title">Laboratorio - Registro de resultados</h4>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Datos de la atención</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <table class="table table-responsive">
+                    <thead>
+                      <tr>
+                        <th class="col-lg-4 text-center">Nombre de Prueba</th>
+                        <th class="col-lg-1 text-center">Fecha Solicitud</th>
+                        <th class="col-lg-7 text-center">Resultados</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for examen in examenes %}
+                    <tr>
+                      <td>{{ examen.cpt_data.denominacion_procedimiento }}</td>
+                      <td>{{ examen.fecha_prueba|date:'Y-m-d' }}
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#md_form_resultados" v-on:click="getExamen('{{examen.id}}')">Registrar</button></td>
+                      <td>
+                      <table class="table table-responsive">
+                        <thead>
+                          <th class="col-lg-3 text-center">Fecha Resultado</th>
+                          <th class="col-lg-3 text-center">Resultado</th>
+                          <th class="col-lg-3 text-center">Estado</th>
+                          <th class="col-lg-3 text-center">Acción</th>
+                        </thead>
+                        <tbody>
+                          {% for examen_resultado in examen.resultados.all %}
+                          <tr>
+                            <td>{{ examen_resultado.fecha_resultado|date:'Y-m-d'}} </td>
+                            <td>{{ examen_resultado.resultado}} </td>
+                            <td>{{ examen_resultado.estado_display}} </td>
+                            <td>
+                              <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#md_form_editar_resultados" v-on:click="getResultadoEditar('{{examen.id}}', '{{examen_resultado.id}}')" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </button>
+                                <a onclick="return confirm('¿Esta seguro de eliminar este registro?')" class="btn btn-danger" v-if="'{{examen_resultado.fecha_resultado|date:'Y-m-d'}}' == hoy" v-bind:href="url_eliminar_resultado+'{{examen_resultado.id}}'"><i class="fa fa-print" aria-hidden="true"></i></a>
+                                <button type="button" class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                      </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static "js/laboratorio/laboratorio_resultado.js" %}"></script>
+  <script src="{% static 'js/afiliacion/paciente.js' %}"></script>
+{% endblock javascript %}

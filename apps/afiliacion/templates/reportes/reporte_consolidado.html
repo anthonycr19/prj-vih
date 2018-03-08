@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_tags %}
+{% block title %} Reporte de cobertura {% endblock %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+{% block container %}
+<form method="post" class="form-horizontal">
+
+  <div class="panel panel-primary">
+    {% csrf_token %}
+    <div class="panel-body">
+      <div class="col-md-12">
+        <div class="col-md-2 pr3">
+            {% field form.fecha_inicial use_datepicker=True %}
+        </div>
+        <div class="col-md-2 pr3">
+            {% field form.fecha_final use_datepicker=True %}
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-3 pr3">
+            {% field form.departamento %}
+        </div>
+        <div class="col-md-3 pr3">
+            {% field form.provincia %}
+        </div>
+        <div class="col-md-3 pr3">
+            {% field form.distrito %}
+        </div>
+      </div>
+
+
+    </div>
+    <div class="panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-2">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="btn-guardar">
+              <span class="fa fa-check"></span>  Descargar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+{% endblock %}
+{% block javascript %}
+  <script src="{% static 'js/common.js' %}"></script>
+  <script src="{% static 'js/reporte-consolidado.js' %}"></script>
+{% endblock %}

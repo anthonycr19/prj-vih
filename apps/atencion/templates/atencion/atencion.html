@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Estrategia de VIH{% endblock %}
+{% block container %}
+  <div id="appAtencion" class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Atencion del paciente: {{ object.paciente }}</div>
+        <div class="panel-body">
+          <div class="row">
+            {% include 'afiliacion/partials/info_paciente.html' %}
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="btn-group" role="group" aria-label="Opciones">
+            <a href="{{ object.get_atencion_antecedentes_url }}" class="btn btn-default">Antecedentes</a>
+            <a href="{% if object.triaje %}{{ object.triaje.get_absolute_url }}{% else %}{{ object.get_atencion_triaje_url }}{% endif %}" class="btn btn-primary">
+              Anamnesis / Funciones Vitales / Exámenes Físico
+            </a>
+            <a href="{{ object.get_atencion_definicion_url }}" class="btn btn-success">Diagnóstico/Tratamiento</a>
+            <a href="{{ object.get_atencion_coinfeccion_url }}" class="btn btn-warning">Descarte</a>
+            <a href="{{ object.get_atencion_cronograma_url }}" class="btn btn-danger">Control/Cronograma</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script>
+    let paciente = "{{ object.paciente.pk }}";
+  </script>
+  <script src="{% static 'js/atencion/atencion.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,232 @@
+ {% extends 'base.html' %}
+{% load static %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+
+{% block title %} Búsqueda de pacientes {% endblock %}
+{% block container %}
+
+<ul class="nav nav-tabs">
+  <li class="{% if flag_dni %} active {% endif %}"><a data-toggle="tab" href="#dni">Busqueda Nro Documento Paciente</a></li>
+  <li class="{% if flag_cnv %} active {% endif %}"><a data-toggle="tab" href="#cnv">Busqueda Recien Nacido por DNI Madre</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="dni" class="tab-pane fade in {% if flag_dni %} active {% endif %}">
+    <div class="row" style="padding-top: 15px;">
+      <div class="col-lg-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading panel-primary" >
+            REGISTRO PACIENTES: Busqueda del Paciente
+          </div>
+          <div class="row" style="padding: 10px 10px 7px 7px;">
+            <div class="col-md-10">
+              <form action="" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Ingrese Nro de documento, Nro de CNV, nombres o apellidos del paciente"
+                  autofocus="autofocus">
+                  <input type="hidden" name="id_busqueda" value="dni">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary buscar" type="submit" id="btn-buscar">Buscar</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+              <div class="col-md-2">
+                {% if crear_paciente %}
+                  <a href="{% url 'afiliacion:crear_paciente' %}" class="form-control btn btn-success">Nuevo</a>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% if paciente_nuevo %}
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Tipo documento</th>
+                <th>Numero documento</th>
+                <th>Nombres y apellidos</th>
+                <th>Edad Actual</th>
+                <th>Género</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for paciente in pacientes %}
+              <tr>
+                <td>{{ paciente.get_tipo_documento_display }}</td>
+                <td>{{ paciente.numero_documento|default_if_none:'' }}</td>
+                <td>{{ paciente.nombre_completo }}</td>
+                <td>{{ paciente.edad_str }} </td>
+                <td>{{ paciente.get_sexo_display }} </td>
+                <td>
+                  {% if paciente.cnv_activo is True  and paciente.tipo_documento == '00'  %}
+                    <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.paciente %}">Crear Historia CNV</a>
+                  {% else %}
+                    <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.paciente %}">Crear Historia</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if paciente_continuo %}
+    <div class="row">
+      <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Tipo documento</th>
+              <th>Numero documento</th>
+              <th>Nombres y apellidos</th>
+              <th>Edad Actual</th>
+              <th>Género</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for paciente in pacientes %}
+            {% if paciente.paciente.is_mostrar_paciente %}
+            <tr>
+              <td>{{ paciente.paciente.get_tipo_documento_display }}</td>
+              <td>{{ paciente.paciente.numero_documento|default_if_none:'' }}</td>
+              <td>{{ paciente.paciente.nombre_completo }}</td>
+              <td>{{ paciente.paciente.edad_str }} </td>
+              <td>{{ paciente.paciente.get_sexo_display }} </td>
+              <td>
+                {% if paciente.paciente.cnv_activo is True  and paciente.paciente.tipo_documento == '00'  %}
+                  <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.paciente.paciente %}">Actualizar Historia CNV</a>
+                {% else %}
+                  <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.paciente.paciente %}">Actualizar Historia</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endif %}
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div id="cnv" class="tab-pane fade in {% if flag_cnv %} active {% endif %}">
+    <div class="row" style="padding-top: 15px;">
+      <div class="col-lg-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading panel-primary" >
+            REGISTRO PACIENTES: Busqueda por Recien Nacido
+          </div>
+          <div class="row" style="padding: 10px 10px 7px 7px;">
+            <div class="col-md-10">
+              <form action="" method="get">
+                <div class="input-group">
+                  <input type="hidden" name="id_busqueda" value="cnv">
+                  <input type="text" class="form-control" name="q" placeholder="Ingrese Nro de documento, nombres o apellidos del paciente"
+                  autofocus="autofocus">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary buscar" type="submit" id="btn-buscar">Buscar</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      {% if paciente_cnv %}
+      <div class="row">
+        <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Numero CNV</th>
+                <th>Numero DNI</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Nombres</th>
+                <th>Fecha Nacimiento</th>
+                <th>Edad</th>
+                <th>Género</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for paciente in pacientes %}
+              <tr>
+                <td>{{ paciente.numero_documento_cnv }}</td>
+                <td>{{ paciente.numero_documento }}</td>
+                {% if not paciente.apellido_paterno %}
+                  <td class="danger"> No Registrado </td>
+                {% else %}
+                  <td>{{ paciente.apellido_paterno }} </td>
+                {% endif %}
+
+                {% if not paciente.apellido_materno %}
+                  <td class="danger"> No Registrado </td>
+                {% else %}
+                  <td>{{ paciente.apellido_materno }} </td>
+                {% endif %}
+
+                {% if not paciente.nombres %}
+                  <td class="danger"> No Registrado </td>
+                {% else %}
+                  <td>{{ paciente.nombres }} </td>
+                {% endif %}
+
+                <td>{{ paciente.fecha_nacimiento }} </td>
+                <td>{{ paciente.edad_str }} </td>
+
+                {% if paciente.sexo == '1' %}
+                  <td>Masculino</td>
+                {% endif %}
+                {% if paciente.sexo == '2' %}
+                  <td>Femenino</td>
+                {% endif %}
+                {% if paciente.estado == '1' %}
+                <td>
+                  <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.id_paciente %}">Actualizar Historia CNV</a>
+                </td>
+                {% endif %}
+                {% if paciente.estado == '2' %}
+                <td>
+                  <a class="btn btn-success" href="{% url 'afiliacion:editar_paciente' paciente.id_paciente %}">Crear Historia CNV</a>
+                </td>
+                {% endif %}
+                {% if paciente.estado == '3' %}
+                <td>
+                  <a class="btn btn-primary" href="{% url 'afiliacion:editar_paciente' paciente.dni_activo %}">DNI {{ paciente.dni_rn }}</a>
+                </td>
+                {% endif %}
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+{% endblock %}

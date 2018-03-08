@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load form_tags static %}
+{% block title %} Nuevo Registro Paciente {% endblock %}
+{% block css %}
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+
+{% endblock css %}
+
+{% block container %}
+  <form method="post" class="form-horizontal">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Afiliación: Nuevo Registro</span>
+          <div class="pull-right">
+            <div class="btn-group" role="group">
+              <input class="btn btn-small btn-success" type="submit" value="Guardar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      {% csrf_token %}
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Datos Generales</span>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-12">
+          <div class="col-md-6 pr3" >
+            {% field form.tipo_documento  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.numero_documento  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.apellido_paterno  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.apellido_materno  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.nombres  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.sexo  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.estado_civil  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.grado_instruccion  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.etnia  %}
+          </div>
+          <div class="col-md-6 pr3" >
+            {% field form.ocupacion  %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      {% csrf_token %}
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Datos Nacimiento</span>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-12">
+          <div class="col-md-4 pr3">
+            {% field form.nacimiento_pais %}
+          </div>
+          <div class="col-md-4 pr3">
+            {% field form.nacimiento_departamento %}
+          </div>
+          <div class="col-md-4 pr3">
+            {% field form.nacimiento_provincia %}
+          </div>
+          <div class="col-md-6 pr3">
+            {% field form.nacimiento_distrito %}
+          </div>
+          <div class="col-md-6 pr3">
+            {% field form.fecha_nacimiento cols=True inline=True datepicker=True %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="panel">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">
+                <span class="fa fa-check"></span>  Guardar
+              </button>
+            </div>
+            <div class="col-md-6">
+              <a href="{% url 'afiliacion:buscar_paciente' %}" >
+              <button class="btn btn-danger btn-lg btn-block" type="button">Cancelar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/afiliacion/forms.js' %}"></script>
+  <script src="{% static 'js/afiliacion/paciente-crear.js' %} "></script>
+  <script src="{% static 'js/afiliacion/ubigeo.js' %} "></script>
+{% endblock javascript %}

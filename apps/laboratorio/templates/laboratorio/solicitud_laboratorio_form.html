@@ -1,0 +1,68 @@
+{% load static %}
+<div class="panel panel-primary">
+  <div class="panel-heading">Solicitud de Examen de Laboratorio</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <h5 class="text-center"><strong>Tiene Consentimiento Informado</strong></h5>
+        <form id="frm_laboratorio" class="form-horizontal" method="post">
+          <input id="id_eess" type="hidden" name="eess" value="{{ user.current_establishment }}" v-model="eess"/>
+          <input id="id_personal_salud" type="hidden" name="personal_salud" value="{{ user.username }}" v-model="medico"/>
+          <input type="hidden" name="paciente" v-model="paciente"/>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">CPT</label>
+            <div class="col-sm-8">
+              <input id="id_cpt" type="hidden" name="cpt" v-model="examen_solicitado.cpt"/>
+              <input id="id_cptname" type="text" name="cptname" class="form-control"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Fecha</label>
+            <div class="col-sm-8">
+              <input id="id_fecha_prueba" name="fecha_prueba" class="form-control" v-model="examen_solicitado.fecha"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Observaciones</label>
+            <div class="col-sm-8">
+              <textarea name="observaciones" class="form-control" v-model="examen_solicitado.observaciones"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+              <button type="button" class="btn btn-primary" v-on:click="solicitarExamenLaboratorio($event)">Registrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Descripcion de la prueba</th>
+            <th>Fecha de la prueba</th>
+            <th>Observaciones</th>
+            <th>Estado</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(examen, index) in examenes_solicitados">
+            <td>[[ index + 1 ]]</td>
+            <td>[[ examen.cpt_data.denominacion_procedimiento ]]</td>
+            <td>[[ examen.fecha ]]</td>
+            <td>[[ examen.observaciones ]]</td>
+            <td>[[ examen.estado_display ]]</td>
+            <td>
+              <button class="btn btn-danger" v-bind="{id: examen.id}"   v-if="examen.fecha_prueba == hoy" v-on:click="eliminar(examen)"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col-md-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Datos de Atención</div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="table">
+            <tr>
+              <th>Servicio (UPS):</th>
+              <th>Paciente:</th>
+              <td>[[ current_paciente.attributes.nombre_completo ]]
+              </td>
+            </tr>
+            <tr>
+              <th>Profesional:</th>
+              <td>{{ user.full_name }}</td>
+              <th>Edad:</th>
+              <td>[[ current_paciente.attributes.edad_str ]]</td>
+            </tr>
+            <tr>
+              <th>Fecha:</th>
+              <td>{% now "d/m/Y" %}</td>
+              <th>Sexo:</th>
+              <td>
+                <template>
+                  <span v-show="current_paciente.attributes.sexo === '1'">Masculino&nbsp;<i class="fa fa-mars" aria-hidden="true"></i></span>
+                  <span v-show="current_paciente.attributes.sexo === '2'">Femenino&nbsp;<i class="fa fa-venus" aria-hidden="true"></i></span>
+                </template>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

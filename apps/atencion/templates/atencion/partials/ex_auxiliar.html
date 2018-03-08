@@ -1,0 +1,102 @@
+{% load form_tags %}
+<div class="row">
+  <div class="col-md-12">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.atencion }}
+      <div class="panel panel-primary">
+        <div class="panel-heading">Generación de exámenes auxiliares</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-primary">
+                <div class="panel-heading">Imágenes</div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      {% field form.imagen cols=True %}
+                    </div>
+                    <div class="col-md-4">
+                      {% field form.imagen_fecha datepicker=True cols=True %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading">Laboratorio</div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      {% field form.laboratorio cols=True %}
+                    </div>
+                    <div class="col-md-4">
+                      {% field form.laboratorio_fecha datepicker=True cols=True %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading">Procedimientos</div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      {% field form.procedimiento cols=True %}
+                    </div>
+                    <div class="col-md-4">
+                      {% field form.procedimiento_fecha datepicker=True cols=True %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i>&nbsp;Registrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Exámenes Auxiliares</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-striped table-bordered table-condensed" id="tbExamenesAux">
+              <thead>
+              <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for lexaux in object_list %}
+                <tr>
+                  <td>{{ lexaux.imagen }}</td>
+                  <td></td>
+                  <td>{{ lexaux.imagen_fecha|date:"d/m/Y" }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>{{ lexaux.laboratorio }}</td>
+                  <td></td>
+                  <td>{{ lexaux.laboratorio_fecha|date:"d/m/Y" }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>{{ lexaux.procedimiento }}</td>
+                  <td></td>
+                  <td>{{ lexaux.procedimiento_fecha|date:"d/m/Y" }}</td>
+                  <td></td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

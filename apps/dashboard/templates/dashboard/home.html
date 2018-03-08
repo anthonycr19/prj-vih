@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">VIH</div>
+      <div class="panel-body">
+        {% if rol == 'psicologia' %}
+        <div class="row">
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="{% url 'afiliacion:buscar_paciente' %}">
+                  Afiliación
+                </a>
+              </h4>
+              <p class="card-text">Afiliación del paciente.</p>
+            </div>
+          </div>
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="{%  url 'consejeria:consejeria_pre_index' %}">
+                  Consejería (pre)
+                </a>
+              </h4>
+              <p class="card-text">Pre Consejería</p>
+            </div>
+          </div>
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="{%  url 'consejeria:consejeria_post_index' %}">
+                  Consejería (post)
+                </a>
+              </h4>
+              <p class="card-text">Consejeria Post al paciente.</p>
+            </div>
+          </div>
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="{% url 'laboratorio:laboratorio_index' %}">
+                  Laboratorio
+                </a>
+              </h4>
+              <p class="card-text">Ingreso pruebas de Laboratorio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="{% url 'laboratorio:laboratorio_resultado_index' %}">
+                    Laboratorio - Registro de Resultados
+                </a>
+              </h4>
+              <p class="card-text">Ingreso de resultados de Laboratorio.</p>
+              </div>
+          </div>
+          <div class="col-sm-3 bloque">
+            <div class="well">
+              <h4>
+                <a href="#">
+                    Dispensación
+                </a>
+              </h4>
+              <p class="card-text">Dispensación de medicamentos</p>
+            </div>
+          </div>
+        </div>
+        {% elif rol == 'medico' %}
+          <div class="row">
+            <div class="col-sm-3 bloque">
+              <div class="well">
+                <h4>
+                  <a href="{% url 'atencion:atencion_index' %}">
+                    Atención
+                  </a>
+                </h4>
+                <p class="card-text">Atención del Paciente</p>
+              </div>
+            </div>
+            <div class="col-sm-3 bloque">
+              <div class="well">
+                <h4>
+                  <a href="{% url 'atencion:egreso-index' %}">
+                    Egreso
+                  </a>
+                </h4>
+                <p class="card-text">Egreso del Paciente</p>
+              </div>
+            </div>
+          </div>
+        {% elif rol == 'brigadista' %}
+          <div class="row">
+            <div class="col-sm-3 bloque">
+              <div class="well">
+                <h4>
+                  <a href="{% url 'afiliacion:crear_brigada' %}">
+                    Brigada
+                  </a>
+                </h4>
+                <p class="card-text">Crear Brigada</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block bottom_scripts %}
+  <script>
+    $(function () {
+      $('#bloque').tooltip('show')
+    })
+  </script>
+{% endblock %}

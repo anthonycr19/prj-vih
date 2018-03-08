@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_tags %}
+{% block title %}Buscar pacientes{% endblock %}
+{% block container %}
+<div id="app">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Datos de Atención</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <table class="table">
+                    <tr>
+                      <th>Servicio (UPS):</th>
+                      <td>{{ atencion.ups }}</td>
+                      <th>Paciente:</th>
+                      <td>{{ atencion.paciente.nombre_completo }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Profesional:</th>
+                      <td>{{ user.full_name }}</td>
+                      <th>Edad:</th>
+                      <td>{{ atencion.paciente.edad_str }}</td>
+                    </tr>
+                    <tr>
+                      <th>Fecha Atención:</th>
+                      <td>{{ atencion.fecha |date:'d/m/Y' }}</td>
+                      <th>Sexo:</th>
+                      <td>
+                        <template>
+                          <span v-show="{{ atencion.paciente.sexo }} == '1'">Masculino&nbsp;<i class="fa fa-mars" aria-hidden="true"></i></span>
+                          <span v-show="{{ atencion.paciente.sexo }} == '2'">Femenino&nbsp;<i class="fa fa-venus" aria-hidden="true"></i></span>
+                        </template>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form role="form" method="post" action=".">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Evaluación Consejería Post Test</div>
+          <div class="panel-body">
+            {% csrf_token %}
+            <div class="row">
+              <div class="form-group col-lg-6">
+                {% field form.via_transmision %}
+              </div>
+              <div class="form-group col-lg-6">
+                {% field form.antecedentes %}
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div id="div_id_tipo_transmision" class="form-group">
+                  <label for="id_tipo_transmision" class="control-label requiredField">Tipo de Transmisión<span
+                      class="asteriskField">*</span></label>
+                  <div class="controls">
+                    <select name="tipo_transmision" class="select form-control" id="id_tipo_transmision"
+                            v-model="tipo_transmision">
+                      <option v-if="via_transmision === 'sexual'" value="HETERO">Heterosexual</option>
+                      <option v-if="via_transmision === 'sexual'" value="HOMO">Homosexual</option>
+                      <option v-if="via_transmision === 'sexual'" value="BI">Bisexual</option>
+                      <option v-if="via_transmision === 'parental'" value="TRANSFUSION">Transfusión de sangre y/o
+                        derivados
+                      </option>
+                      <option v-if="via_transmision === 'parental'" value="UDI">Compartir agujas/UDI</option>
+                      <option v-if="via_transmision === 'parental'" value="ACCIDENTE">Accidente con material
+                        contaminado
+                      </option>
+                      <option v-if="via_transmision === 'parental'" value="TRANSPLANTE">Transplante de órganos ó
+                        tejidos
+                      </option>
+                      <option v-if="via_transmision === 'parental' || via_transmision === 'sexual'"
+                              value="NODETERMINADO">No determinado
+                      </option>
+                      <option v-else value=""></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                {% field form.nro_parejas %}
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                {% field form.uso_preservativo %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+          <a class="btn btn-small btn-danger"
+          href="{% url 'consejeria:crear_consejeria_post' cita_uuid %}">
+          Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script>
+    let cita_uuid = "{{ cita_uuid }}";
+  </script>
+  <script src="{% static "js/afiliacion/citas.js" %}"></script>
+  <script src="{% static "js/consejeria/crear_consejeria_post.js" %}"></script>
+{% endblock javascript %}

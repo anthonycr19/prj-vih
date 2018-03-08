@@ -1,0 +1,1319 @@
+[
+{
+  "model": "medicamentos.esquema",
+  "pk": 1,
+  "fields": {
+    "descripcion": "AZT/3TC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 2,
+  "fields": {
+    "descripcion": "AZT/3TC/NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": [
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 3,
+  "fields": {
+    "descripcion": "AZT/3TC+ABC",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 4,
+  "fields": {
+    "descripcion": "AZT+DDI+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 5,
+  "fields": {
+    "descripcion": "AZT+DDI+NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 6,
+  "fields": {
+    "descripcion": "AZT100+3TC+NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 7,
+  "fields": {
+    "descripcion": "ABC/3TC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 8,
+  "fields": {
+    "descripcion": "ABC+3TC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 9,
+  "fields": {
+    "descripcion": "ABC+3TC+NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 10,
+  "fields": {
+    "descripcion": "ABC+DDI+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 11,
+  "fields": {
+    "descripcion": "DDI+3TC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 12,
+  "fields": {
+    "descripcion": "DDI+3TC+NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 13,
+  "fields": {
+    "descripcion": "TDF/FTC/EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 14,
+  "fields": {
+    "descripcion": "TDF/FTC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 15,
+  "fields": {
+    "descripcion": "TDF+AZT/3TC",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 16,
+  "fields": {
+    "descripcion": "TDF+ABC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 17,
+  "fields": {
+    "descripcion": "TDF+3TC+EFV",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 18,
+  "fields": {
+    "descripcion": "TDF+3TC+NVP",
+    "tipo": "Primera L\u00ednea",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 19,
+  "fields": {
+    "descripcion": "ABC+3TC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 20,
+  "fields": {
+    "descripcion": "ABC+3TC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 21,
+  "fields": {
+    "descripcion": "ABC+AZT+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 22,
+  "fields": {
+    "descripcion": "ABC+AZT+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 23,
+  "fields": {
+    "descripcion": "AZT/3TC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 24,
+  "fields": {
+    "descripcion": "AZT/3TC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 25,
+  "fields": {
+    "descripcion": "AZT+DDI+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 26,
+  "fields": {
+    "descripcion": "AZT+DDI+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 27,
+  "fields": {
+    "descripcion": "AZT100+DDI+ATV",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 28,
+  "fields": {
+    "descripcion": "AZT100+DDI+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 29,
+  "fields": {
+    "descripcion": "AZT100+3TC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 30,
+  "fields": {
+    "descripcion": "DDI+3TC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 31,
+  "fields": {
+    "descripcion": "DDI+3TC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 32,
+  "fields": {
+    "descripcion": "DDI+ABC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 33,
+  "fields": {
+    "descripcion": "DDI+ABC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 34,
+  "fields": {
+    "descripcion": "TDF+AZT+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 35,
+  "fields": {
+    "descripcion": "TDF+ABC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 36,
+  "fields": {
+    "descripcion": "TDF+ABC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 37,
+  "fields": {
+    "descripcion": "TDF+DDI+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 38,
+  "fields": {
+    "descripcion": "TDF+DDI+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 39,
+  "fields": {
+    "descripcion": "TDF+3TC+ATV",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 40,
+  "fields": {
+    "descripcion": "TDF+3TC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 41,
+  "fields": {
+    "descripcion": "TDF+3TC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 42,
+  "fields": {
+    "descripcion": "TDF/FTC+ATV+rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 43,
+  "fields": {
+    "descripcion": "TDF/FTC+LPV/rtv",
+    "tipo": "De Rescate",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 44,
+  "fields": {
+    "descripcion": "ABC+3TC+EFV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 45,
+  "fields": {
+    "descripcion": "ABC+3TC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 46,
+  "fields": {
+    "descripcion": "ABC+DDI+3TC+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 47,
+  "fields": {
+    "descripcion": "ABC+DDI+EFV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 48,
+  "fields": {
+    "descripcion": "ABC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 49,
+  "fields": {
+    "descripcion": "ABC+NVP+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 50,
+  "fields": {
+    "descripcion": "ABC+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 51,
+  "fields": {
+    "descripcion": "AZT+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 52,
+  "fields": {
+    "descripcion": "AZT/3TC+ABC+EFV",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 53,
+  "fields": {
+    "descripcion": "AZT/3TC+ABC+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 54,
+  "fields": {
+    "descripcion": "AZT/3TC+ABC+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 55,
+  "fields": {
+    "descripcion": "AZT/3TC+DDI+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 56,
+  "fields": {
+    "descripcion": "AZT/3TC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 57,
+  "fields": {
+    "descripcion": "AZT/3TC+ATV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 58,
+  "fields": {
+    "descripcion": "AZT/3TC/NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 59,
+  "fields": {
+    "descripcion": "DDI+3TC+ABC+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 60,
+  "fields": {
+    "descripcion": "DDI+3TC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 61,
+  "fields": {
+    "descripcion": "DDI+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 62,
+  "fields": {
+    "descripcion": "DDI+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 63,
+  "fields": {
+    "descripcion": "DDI+ATV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 64,
+  "fields": {
+    "descripcion": "3TC+EFV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 65,
+  "fields": {
+    "descripcion": "3TC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 66,
+  "fields": {
+    "descripcion": "3TC+NVP+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 67,
+  "fields": {
+    "descripcion": "3TC+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 68,
+  "fields": {
+    "descripcion": "TDF+AZT/3TC+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 69,
+  "fields": {
+    "descripcion": "TDF+AZT/3TC+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 70,
+  "fields": {
+    "descripcion": "TDF+3TC+ABC+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 71,
+  "fields": {
+    "descripcion": "TDF+3TC+ABC+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 72,
+  "fields": {
+    "descripcion": "TDF+3TC+EFV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 73,
+  "fields": {
+    "descripcion": "TDF+3TC+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 74,
+  "fields": {
+    "descripcion": "TDF+3TC+EFV+ATV+LPV/rtv ",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 75,
+  "fields": {
+    "descripcion": "TDF+ABC+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 76,
+  "fields": {
+    "descripcion": "TDF+EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 77,
+  "fields": {
+    "descripcion": "TDF+NVP+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 78,
+  "fields": {
+    "descripcion": "TDF+ATV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 79,
+  "fields": {
+    "descripcion": "EFV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 80,
+  "fields": {
+    "descripcion": "EFV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 81,
+  "fields": {
+    "descripcion": "ATV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 82,
+  "fields": {
+    "descripcion": "ABC+3TC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 83,
+  "fields": {
+    "descripcion": "ABC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 84,
+  "fields": {
+    "descripcion": "AZT/3TC+EFV+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 85,
+  "fields": {
+    "descripcion": "AZT/3TC+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 86,
+  "fields": {
+    "descripcion": "AZT/3TC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 87,
+  "fields": {
+    "descripcion": "TDF+ABC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 88,
+  "fields": {
+    "descripcion": "TDF+3TC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 89,
+  "fields": {
+    "descripcion": "TDF+3TC+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 90,
+  "fields": {
+    "descripcion": "TDF+3TC+EFV+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 91,
+  "fields": {
+    "descripcion": "TDF+AZT/3TC+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 92,
+  "fields": {
+    "descripcion": "TDF+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 93,
+  "fields": {
+    "descripcion": "TDF+AZT+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 94,
+  "fields": {
+    "descripcion": "TDF/FTC+DRV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 95,
+  "fields": {
+    "descripcion": "DDI+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 96,
+  "fields": {
+    "descripcion": "3TC+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 97,
+  "fields": {
+    "descripcion": "EFV+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 98,
+  "fields": {
+    "descripcion": "ETV+DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 99,
+  "fields": {
+    "descripcion": "DRV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 100,
+  "fields": {
+    "descripcion": "ETV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 101,
+  "fields": {
+    "descripcion": "TDF+3TC+ETV",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 102,
+  "fields": {
+    "descripcion": "TDF+3TC+ETV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 103,
+  "fields": {
+    "descripcion": "TDF+3TC+ETV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 104,
+  "fields": {
+    "descripcion": "TDF+ETV+ATV+rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 105,
+  "fields": {
+    "descripcion": "TDF+ETV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 106,
+  "fields": {
+    "descripcion": "3TC+ETV+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 107,
+  "fields": {
+    "descripcion": "AZT/3TC+ETV",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 108,
+  "fields": {
+    "descripcion": "ETV+LPV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 109,
+  "fields": {
+    "descripcion": "ABC+3TC+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 110,
+  "fields": {
+    "descripcion": "AZT/3TC+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 111,
+  "fields": {
+    "descripcion": "AZT/3TC+LPV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 112,
+  "fields": {
+    "descripcion": "3TC+RAL+LPV/rtv",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 113,
+  "fields": {
+    "descripcion": "ATV+rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 114,
+  "fields": {
+    "descripcion": "LPV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 115,
+  "fields": {
+    "descripcion": "TDF+3TC+ATV+rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 116,
+  "fields": {
+    "descripcion": "TDF+3TC+LPV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 117,
+  "fields": {
+    "descripcion": "TDF+3TC+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 118,
+  "fields": {
+    "descripcion": "TDF+ATV+rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+},
+{
+  "model": "medicamentos.esquema",
+  "pk": 119,
+  "fields": {
+    "descripcion": "TDF+LPV/rtv+RAL",
+    "tipo": "Otros",
+    "etapa_crecimiento": null,
+    "n_meses": null,
+    "medicamentos": []
+  }
+}
+]

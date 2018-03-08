@@ -1,0 +1,154 @@
+[
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 2,
+  "fields": {
+    "descripcion": "15d",
+    "tiempo_dias": 15
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 3,
+  "fields": {
+    "descripcion": "30d",
+    "tiempo_dias": 30
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 4,
+  "fields": {
+    "descripcion": "2m",
+    "tiempo_dias": 2
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 5,
+  "fields": {
+    "descripcion": "3m",
+    "tiempo_dias": 3
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 6,
+  "fields": {
+    "descripcion": "4m",
+    "tiempo_dias": 4
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 7,
+  "fields": {
+    "descripcion": "5m",
+    "tiempo_dias": 5
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 8,
+  "fields": {
+    "descripcion": "6m",
+    "tiempo_dias": 6
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 9,
+  "fields": {
+    "descripcion": "7m",
+    "tiempo_dias": 7
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 10,
+  "fields": {
+    "descripcion": "8m",
+    "tiempo_dias": 8
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 11,
+  "fields": {
+    "descripcion": "9m",
+    "tiempo_dias": 9
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 12,
+  "fields": {
+    "descripcion": "10m",
+    "tiempo_dias": 10
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 13,
+  "fields": {
+    "descripcion": "11m",
+    "tiempo_dias": 11
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 14,
+  "fields": {
+    "descripcion": "12m",
+    "tiempo_dias": 12
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 15,
+  "fields": {
+    "descripcion": "2m",
+    "tiempo_dias": 2
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 16,
+  "fields": {
+    "descripcion": "4m",
+    "tiempo_dias": 4
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 17,
+  "fields": {
+    "descripcion": "6m",
+    "tiempo_dias": 6
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 18,
+  "fields": {
+    "descripcion": "8m",
+    "tiempo_dias": 8
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 19,
+  "fields": {
+    "descripcion": "10m",
+    "tiempo_dias": 10
+  }
+},
+{
+  "model": "atencion.atencionfrecuencia",
+  "pk": 20,
+  "fields": {
+    "descripcion": "12m",
+    "tiempo_dias": 12
+  }
+}
+]

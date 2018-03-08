@@ -1,0 +1,65 @@
+<div id="appPaciente" class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Buscar Persona</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="input-group">
+              <input v-model="nombre_paciente" type="text" class="form-control" placeholder="Ingrese un nombre, apellidos o DNI"
+                autofocus/>
+              <span class="input-group-btn">
+                <button  v-on:click="buscarPaciente($event)" class="btn btn-default" type="button" title="Buscar">
+                  <span class="fa fa-search" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table table-responsive">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Tip. Doc.</th>
+                <th>Num. Doc.</th>
+                <th>Nombres y Apellidos</th>
+                <th>Accion</th>
+              </tr>
+              </thead>
+              <tbody>
+                  <div class="loading-paciente" v-if="loading" v-cloak>
+                      <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                      <span>Buscando ...</span>
+                    </div>
+                  <tr v-for="(list_paciente, index) in list_buscar_paciente">
+
+                <td>[[ index + 1 ]]</td>
+
+                <td>
+                    <label v-if="list_paciente.tipo_documento == '01'">DNI</label>
+                    <label v-if="list_paciente.tipo_documento == '02'">LM/BO</label>
+                    <label v-if="list_paciente.tipo_documento == '03'">CARNET DE EXTRAJERIA</label>
+                    <label v-if="list_paciente.tipo_documento == '04'">ACTA DE NACIMIENTO</label>
+                    <label v-if="list_paciente.tipo_documento == '06'">PASAPORTE</label>
+                    <label v-if="list_paciente.tipo_documento == '07'">DI DEL EXTRANJERO</label>
+                    <label v-if="list_paciente.tipo_documento == '00'">NO SE CONOCE</label>
+                  </td>
+                  <td>[[ list_paciente.numero_documento ]]</td>
+                  <td>
+                    [[ list_paciente.nombres ]]
+                    [[ list_paciente.apellido_paterno ]]
+                    [[ list_paciente.apellido_materno ]]
+                  </td>
+                  <td>{{accion}}</td>
+
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

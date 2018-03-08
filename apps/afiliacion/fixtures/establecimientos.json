@@ -1,0 +1,2177 @@
+[
+  {
+    "fields": {
+      "codigo_ipress": "0000005044", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo Bagua Gustavo Lanata", 
+      "diresa": "AMAZONAS", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 1
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004838", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Virgen de Fatima", 
+      "diresa": "AMAZONAS", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 2
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005145", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. Santa Mar\u00eda de Nieva", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 3
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005162", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Huampami", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 4
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00007134\u00a0", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Nieva", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 5
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005162", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Imaza", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 6
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005175", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Galilea", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 7
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005147", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Putuyakat", 
+      "diresa": "AMAZONAS", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 8
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001543", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Victor Ramos Guardia - Huaraz", 
+      "diresa": "ANCASH", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 9
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001652", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital La Caleta", 
+      "diresa": "ANCASH", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 10
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007719", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Guillermo Diaz de la Vega", 
+      "diresa": "APURIMAC I", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 11
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004131", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital General de Andahuaylas", 
+      "diresa": "APURIMAC II", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 12
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001231", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital III Regional Honorio Delgado", 
+      "diresa": "AREQUIPA", 
+      "amp": "CERITS", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 13
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001232", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital III Goyeneche", 
+      "diresa": "AREQUIPA", 
+      "amp": "UAMP", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 14
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001344", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Caman\u00e1", 
+      "diresa": "AREQUIPA", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 15
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003543", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Reg. de Ayacucho \"Miguel Angel Mariscal Llerena\"", 
+      "diresa": "AYACUCHO", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 16
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007686", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Cajamarca", 
+      "diresa": "CAJAMARCA I", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 17
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004659", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosptital \"Tito Villar Cabezas\" - Bambamarca", 
+      "diresa": "CAJAMARCA II CHOTA", 
+      "amp": "CERITS", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 18
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004659", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo Chota \"Jos\u00e9 Soto Cadenillas\"", 
+      "diresa": "CAJAMARCA II CHOTA", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 19
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004981", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Santa Maria de Cutervo", 
+      "diresa": "CAJAMARCA III CUTERVO", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 20
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004210", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital General Ja\u00e9n", 
+      "diresa": "CAJAMARCA IV JAEN", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 21
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000202", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Santa Cruz", 
+      "diresa": "CAJAMARCA II CHOTA", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 22
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00004718", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Chalamarca", 
+      "diresa": "CAJAMARCA II CHOTA", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 23
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00004682", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Lajas", 
+      "diresa": "CAJAMARCA II CHOTA", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 24
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006218", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Daniel Alcides Carri\u00f3n  ", 
+      "diresa": "CALLAO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 25
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006219", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital San Jos\u00e9", 
+      "diresa": "CALLAO", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 26
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000008266", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Ventanilla", 
+      "diresa": "CALLAO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 27
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007126", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "FF.AA.", 
+      "establecimiento_salud": "Centro M\u00e9dico Naval Cirujano Mayor Santiago T\u00e1vara", 
+      "diresa": "CALLAO", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 28
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002305", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Apoyo A. Lorena", 
+      "diresa": "CUSCO", 
+      "amp": "CERITS", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 29
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002289", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional del Cusco", 
+      "diresa": "CUSCO", 
+      "amp": "UAMP", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 30
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000002421", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Quillabamba", 
+      "diresa": "CUSCO", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 31
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003853", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Departamental de Huancavelica", 
+      "diresa": "HUANCAVELICA", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 32
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000754", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Hermilio Valdiz\u00e1n", 
+      "diresa": "HUANUCO", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 33
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000932", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Tingo Mar\u00eda", 
+      "diresa": "HUANUCO", 
+      "amp": "CERITS", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 34
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000952", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Aucayacu", 
+      "diresa": "HUANUCO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 35
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000952", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Puerto Inca", 
+      "diresa": "HUANUCO", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 36
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000924", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Yuyapichis", 
+      "diresa": "HUANUCO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 37
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000927", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Codo de Pozuzo", 
+      "diresa": "HUANUCO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 38
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003358", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional de Ica", 
+      "diresa": "ICA", 
+      "amp": "CERITS", 
+      "categorizacion": "II-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 39
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003414", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital San Jos\u00e9 de Chincha", 
+      "diresa": "ICA", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 40
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00003359", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Santa Mar\u00eda Socorro", 
+      "diresa": "ICA", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 41
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007633", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Cayetano Heredia", 
+      "diresa": "DIRIS NORTE", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 42
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00007634", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Sergio E. Bernales", 
+      "diresa": "DIRIS NORTE", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 43
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005791", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.s. Tahuantinsuyo Bajo", 
+      "diresa": "DIRIS NORTE", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 44
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00007632", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Carlos Lanfranco La Hoz ", 
+      "diresa": "DIRIS NORTE", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 45
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006210", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Instituto Nacional de Enfermedades Neopl\u00e1sicas", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 46
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006216", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Instituto Nacional de Salud del Ni\u00f1o", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 47
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006208", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Instituto Nacional Materno Perinatal", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 48
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006206", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Dos de Mayo", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 49
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006207", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Arzobispo Loayza", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 50
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006215", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Docente Madre Ni\u00f1o San Bartolom\u00e9", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 51
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006211", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo Santa Rosa", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 52
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00013591\u00a0", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "PNP", 
+      "establecimiento_salud": "Hospital Central PNP \"Luis N Saenz\"", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 53
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00010751", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "FF.AA.", 
+      "establecimiento_salud": "Hospital Central FAP/Direcci\u00f3n de Sanidad FAP", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 54
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00017024", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "FF.AA.", 
+      "establecimiento_salud": "Hospital Militar Central \"Luis Arias Schereiber\"", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 55
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006203", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CERITSS Ra\u00fal Patrucco Puigg", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "CERITS", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 56
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006170", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Max Arias Schereider", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 57
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006196", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CSMI Magdalena", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 58
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006184", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Bre\u00f1a", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 59
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006186", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Conde de la Vega Baja", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 60
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006195", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Lince", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 61
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006187", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Mirones Bajo", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 62
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006175", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CSMI El Porvenir", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 63
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006191", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. San Sebasti\u00e1n", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 64
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006178", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CSMI Surquillo", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "CERITS", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 65
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006194\u00a0", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Villa Mar\u00eda Perpetuo Socorro", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 66
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005842", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Caja de Agua", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "CERITS", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 67
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00010054", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "Asoc. Civil Impacta San Miguel", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 68
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00018321", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "Asoc. Civil V\u00eda Libre", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 69
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00011984", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "Asoc. Civil Inmensa \"Investigaciones M\u00e9dicas en Salud\"", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 70
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00012339", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "Hogar San Camilo", 
+      "diresa": "DIRIS CENTRO", 
+      "amp": "", 
+      "categorizacion": "I-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 71
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005617", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital San Juan de Lurigancho", 
+      "diresa": "DIRIS ESTE", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 72
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000005946", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Nacional Hip\u00f3lito Unanue", 
+      "diresa": "DIRIS ESTE", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 73
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00016391", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "INPE", 
+      "establecimiento_salud": "E.P.Lurigancho", 
+      "diresa": "DIRIS ESTE", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 74
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000005987", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Maria Auxiliadora", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 75
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00023159", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Emergencias Villa El Salvador", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "II-E", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 76
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006132", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CSMI San Jos\u00e9", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 77
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006133\u00a0", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "CSMI Juan Pablo II", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 78
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006124", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Cesar Lopez Silva", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 79
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006125", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. San Mart\u00edn de Porres", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 80
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00010870", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "Asoc. Civil Impacta Barranco", 
+      "diresa": "DIRIS SUR", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 81
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000753", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Daniel Alcides Carri\u00f3n", 
+      "diresa": "JUNIN", 
+      "amp": "", 
+      "categorizacion": "III-E", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 82
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000308", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo La Merced ", 
+      "diresa": "JUNIN", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 83
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000432", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Manuel Higa Arakaki - Satipo", 
+      "diresa": "JUNIN", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 84
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006615", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital El Carmen", 
+      "diresa": "JUNIN", 
+      "amp": "", 
+      "categorizacion": "III-E", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 85
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000520", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Tarma", 
+      "diresa": "JUNIN", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 86
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004440", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Docente de Trujillo", 
+      "diresa": "LA LIBERTAD", 
+      "amp": "CERITS", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 87
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005195", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Bel\u00e9n de Trujillo", 
+      "diresa": "LA LIBERTAD", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 88
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004370", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Referencial Ferre\u00f1afe", 
+      "diresa": "LAMBAYEQUE", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 89
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000004317", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Lambayeque", 
+      "diresa": "LAMBAYEQUE", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 90
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007639", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Docente Las Mercedes", 
+      "diresa": "LAMBAYEQUE", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 91
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000005986", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital General de Huacho", 
+      "diresa": "LIMA REGION", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 92
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007637", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Rezola Ca\u00f1ete", 
+      "diresa": "LIMA REGION", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 93
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007635", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital San Juan Bautista Huaral", 
+      "diresa": "LIMA REGION", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 94
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005631", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Barranca Cajatambo ", 
+      "diresa": "LIMA REGION", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 95
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000003", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional de Loreto \"Felipe Arriola Iglesias\"", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "III-1", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 96
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000001", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Iquitos \"C\u00e9sar Garayar Garcia\"", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 97
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000210", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo Santa Gema - Yurimaguas", 
+      "diresa": "LORETO", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 98
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000235", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. San Lorenzo - N\u00facleo Base", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 99
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000150", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Requena", 
+      "diresa": "LORETO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 100
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000091", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Nauta", 
+      "diresa": "LORETO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 101
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000118", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Caballococha", 
+      "diresa": "LORETO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 102
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000066", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Santa Clotilde", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 103
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00000162", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Contamana", 
+      "diresa": "LORETO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 104
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000011581", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ONG", 
+      "establecimiento_salud": "ONG Asociaci\u00f3n Civil Selva Amaz\u00f3nica", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 105
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002698", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Santa Rosa", 
+      "diresa": "MADRE DE DIOS", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 106
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000007732", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Moquegua", 
+      "diresa": "MOQUEGUA", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 107
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002819", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Alto Ilo", 
+      "diresa": "MOQUEGUA", 
+      "amp": "CERITS", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 108
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000980", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Gral de Oxapampa \"Ernesto Germ\u00e1n Guzm\u00e1n Gonzales\"", 
+      "diresa": "PASCO", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 109
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000000979", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Daniel Alcides Carri\u00f3n - Pasco", 
+      "diresa": "PASCO", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 110
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002084", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Santa Rosa", 
+      "diresa": "PIURA I", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 111
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000001910", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo II Sullana", 
+      "diresa": "PIURA II", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 112
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00002021", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Paita", 
+      "diresa": "PIURA II", 
+      "amp": "CERITS", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 113
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00002074", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Talara 2", 
+      "diresa": "PIURA II", 
+      "amp": "UAMP", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 114
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003251", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Manuel Nu\u00f1ez Butron", 
+      "diresa": "PUNO", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 115
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000003299", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Carlos Monje Medrano", 
+      "diresa": "PUNO", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 116
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00003068", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. Lucio Aldazabal Pauca (Huancan\u00e9)", 
+      "diresa": "PUNO", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 117
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00003051", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Chipana - Collao", 
+      "diresa": "PUNO", 
+      "amp": "", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 118
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00007275", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Metropolitano", 
+      "diresa": "PUNO", 
+      "amp": "UAMP", 
+      "categorizacion": "I-3", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 119
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00003349", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. De Apoyo Yunguyo", 
+      "diresa": "PUNO", 
+      "amp": "", 
+      "categorizacion": "II - 1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 120
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00003026", 
+      "pediatria": "", 
+      "condicion": "D", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Capaso", 
+      "diresa": "PUNO", 
+      "amp": "", 
+      "categorizacion": "I-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 121
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006918", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Tarapoto", 
+      "diresa": "SAN MARTIN", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 122
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006732", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. Moyobamba", 
+      "diresa": "SAN MARTIN", 
+      "amp": "UAMP", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 123
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00006733", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. Rioja", 
+      "diresa": "SAN MARTIN", 
+      "amp": "", 
+      "categorizacion": "II-1", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 124
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000006918", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hosp. Tocache", 
+      "diresa": "SAN MARTIN", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 125
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000002864", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital de Apoyo Departamental Hip\u00f3lito Unanue", 
+      "diresa": "TACNA", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 126
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000017077", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional Sangaro II", 
+      "diresa": "TUMBES", 
+      "amp": "", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 127
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000005576", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Regional de Pucallpa", 
+      "diresa": "UCAYALI", 
+      "amp": "CERITS", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 128
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "0000005577", 
+      "pediatria": "P", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "Hospital Amaz\u00f3nico / De Apoyo N\u00b02 Yarinacocha", 
+      "diresa": "UCAYALI", 
+      "amp": "UAMP", 
+      "categorizacion": "II-2", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 129
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "00005502", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "MINSA", 
+      "establecimiento_salud": "C.S. Atalaya", 
+      "diresa": "UCAYALI", 
+      "amp": "", 
+      "categorizacion": "I-4", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 130
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV Guillermo Almenara Yrigoyen", 
+      "diresa": "LIMA  ", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": "H"
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 131
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital III Emergencias Grau", 
+      "diresa": "LIMA", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 132
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital III Chimbote", 
+      "diresa": "ANCASH", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 133
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV Carlos Alberto Segu\u00edn", 
+      "diresa": "AREQUIPA", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 134
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV Alberto Guevara Velasco", 
+      "diresa": "CUSCO", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 135
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital III F\u00e9lix Torrealba", 
+      "diresa": "ICA", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 136
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV Ramiro Prial\u00e9 Prial\u00e9", 
+      "diresa": "JUNIN", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 137
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV V\u00edctor Lazarte", 
+      "diresa": "LA LIBERTAD", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 138
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital Nivel IV Almanzor Aguinaga", 
+      "diresa": "LAMBAYEQUE", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 139
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital Nivel III Iquitos", 
+      "diresa": "LORETO", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 140
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital Nivel III Cayetano Heredia", 
+      "diresa": "PIURA", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 141
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital Nivel IV Edgardo Rebagliati Martins", 
+      "diresa": "LIMA", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 142
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital IV Alberto Sabogal Sologuren", 
+      "diresa": "CALLAO", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 143
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital lI Pucallpa", 
+      "diresa": "UCAYALI", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 144
+  }, 
+  {
+    "fields": {
+      "codigo_ipress": "", 
+      "pediatria": "", 
+      "condicion": "E", 
+      "tipo": "ESSALUD", 
+      "establecimiento_salud": "Hospital Tumbes", 
+      "diresa": "TUMBES", 
+      "amp": "", 
+      "categorizacion": "", 
+      "hepatitis_b": ""
+    }, 
+    "model": "afiliacion.establecimiento", 
+    "pk": 145
+  }
+]

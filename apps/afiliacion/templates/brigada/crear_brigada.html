@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load form_tags static %}
+{% block title %} Nuevo Registro Brigada{% endblock %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+
+{% block container %}
+  <form method="post" class="form-horizontal" id="form-brigada">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="panel-title pull-left">Brigada: Nuevo Registro</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      {% csrf_token %}
+      <div class="panel-body">
+        <div class="col-md-12">
+          <div class="col-md-4 pr3" >
+            {% field form.nombre  %}
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-3 pr3">
+              {% field form.departamento %}
+              {% field form.departamento_nombre %}
+          </div>
+          <div class="col-md-3 pr3">
+              {% field form.provincia %}
+              {% field form.provincia_nombre %}
+          </div>
+          <div class="col-md-3 pr3">
+              {% field form.distrito %}
+              {% field form.distrito_nombre %}
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3">
+              <button class="btn btn-primary btn-lg btn-block" type="submit" id="btn-guardar">
+                <span class="fa fa-check"></span>  Guardar
+              </button>
+            </div>
+            <div class="col-md-3">
+              <a href="{% url 'afiliacion:buscar_paciente' %}" >
+              <button class="btn btn-danger btn-lg btn-block" type="button">Cancelar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </form>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/afiliacion/ubigeo-brigada.js' %} "></script>
+{% endblock javascript %}

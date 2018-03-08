@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Historial</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th>N°</th>
+            <th>Nombre de Prueba</th>
+            <th>Fecha Solicitud</th>
+            <th>Fecha Resultado</th>
+            <th>Resultado</th>
+            <th>Estado</th>
+            <th>Observación</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(examen, index) in examenes_solicitados">
+            <td>[[ index + 1 ]]</td>
+            <td>[[ examen.cpt_data.denominacion_procedimiento ]]</td>
+            <td>[[ examen.fecha_prueba ]]</td>
+            <td>
+              <li v-for="resultado in examen.resultados">[[ resultado.fecha_resultado ]]</li>
+            </td>
+            <td>
+              <li v-for="resultado in examen.resultados">[[ resultado.resultado ]]</li>
+            </td>
+            <td>[[ examen.estado_display ]]</td>
+            <td>[[ examen.observaciones ]]</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

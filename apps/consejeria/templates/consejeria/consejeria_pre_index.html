@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+{% block title %}Buscar pacientes{% endblock %}
+{% block container %}
+  {% include 'afiliacion/partials/buscar_cita.html' with accion='<button class="btn btn-primary" data-toggle="modal" data-target="#md_consejeria_form" v-bind="{id: cita.uuid_cita}" v-on:click="vm.getConsejeria($event)">Consejeria Previa</button>' %}
+  <div id="app">
+    {% include 'consejeria/partials/popup_consejeria_pre.html' %}
+    {% include 'laboratorio/partials/popup_laboratorio.html' %}
+  </div>
+{% endblock %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static "js/afiliacion/citas.js" %}"></script>
+  <script src="{% static "js/consejeria/consejeria_pre.js" %}"></script>
+{% endblock javascript %}

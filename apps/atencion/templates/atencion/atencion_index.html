@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Estrategia de VIH{% endblock %}
+{% block container %}
+  {% include 'afiliacion/partials/buscar_cita.html' with accion='<button v-bind="{uuid_cita: cita.uuid_cita, uuid_paciente:list_paciente.uuid }" class="btn btn-success" data-toggle="modal" data-target="#modalAtencion" v-on:click="vm.atender($event)">Atención</button>' %}
+  <div id="appAtencion">
+    <form id="formAtencion" method="post">
+      {% csrf_token %}
+      {{ form.eess }}
+      {{ form.medico }}
+      <input type="hidden" v-model="cita" name="cita"/>
+      <input type="hidden" v-model="ups" name="ups"/>
+      <input type="hidden" v-model="paciente" name="paciente"/>
+    </form>
+  </div>
+{% endblock container %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static 'js/atencion/atencion.js' %}"></script>
+  <script src="{% static 'js/afiliacion/citas.js' %}"></script>
+{% endblock javascript %}

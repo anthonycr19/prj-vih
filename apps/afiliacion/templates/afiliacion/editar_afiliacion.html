@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+  {% include 'afiliacion/partials/buscar_paciente.html' with accion='<button class="btn btn-primary" v-on:click="vm.getPaciente($event)">Editar</button>' %}
+  <div id="app" class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          Paciente
+        </div>
+        <form method="post">
+          <div class="panel-body">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#personales" data-toggle="tab">Datos Personales</a></li>
+              <li><a href="#naci" data-toggle="tab">Datos de Nacimiento</a></li>
+              <li id="aresi"><a href="#resi" data-toggle="tab">Datos de Residencia</a></li>
+              <li><a href="#contactos" data-toggle="tab">Contatos</a></li>
+            </ul>
+            <div class="row">
+              <div class="col-lg-12">
+                {% if form.errors %}
+                  {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                      <strong>{{ error|escape }}</strong>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="personales">
+                <div class="panel-body">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Datos del paciente</div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_tipo_doc">Tipo Doc.</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_tipo_doc"
+                                   v-model="paciente.attributes.tipo_documento"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_num_doc">Número de Doc.</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_num_doc"
+                                   v-model="paciente.attributes.numero_documento"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_hc">H. C.</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_hc"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_tipo_sec">Tipo de Seguro</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_tipo_sec">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_ap_pat">Apellido Paterno</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_ap_pat"
+                                   v-model="paciente.attributes.apellido_paterno"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_componente">Componente</label>
+                            <input type="text" class="form-control" id="id_componente">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_ap_pat">Apellido Materno</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_ap_mat"
+                                   v-model="paciente.attributes.apellido_materno"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_num_fil">Número Filiación</label>
+                            <input type="text" class="form-control" id="id_num_fil">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_nombres">Nombres</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_nombres"
+                                   v-model="paciente.attributes.nombres"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_fec_nac">Fech. de Nac.</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_fec_nac"
+                                   v-model="paciente.attributes.fecha_nacimiento"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_nombres">Sexo</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_sexo"
+                                   v-model="paciente.attributes.sexo">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_grad_inst">Grado de Instrucción</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_grad_inst"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_est_civil">Estado Civil</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_est_civil"
+                                   v-model="paciente.attributes.estado_civil"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_ocup">Ocupación</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_ocup"
+                                   v-model="paciente.attributes.ocupacion"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_etnia">Etnia</label>
+                            <input type="text" readonly="readonly" class="form-control" id="id_etnia"
+                                   v-model="paciente.attributes.etnia"/>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_tel1">Telefono 1</label>
+                            <input type="text" class="form-control" id="id_tel1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_tel2">Telefono 2</label>
+                            <input type="text" class="form-control" id="id_tel2">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="id_email">Correo Electronico</label>
+                            <input type="text" class="form-control" id="id_email">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-10">
+                          <div class="form-group">
+                            <label for="id_msg">Mensaje Personal</label>
+                            <input type="text" class="form-control" id="id_msg">
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="form-group">
+                            <label for="id_sms">¿Recibe SMS?</label>
+                            <input type="checkbox" class="form-control" id="id_sms">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <div class="text-right">
+                        <button class="btn btn-primary" type="submit"><span class="fa fa-save">&nbsp;</span>Guardar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="naci">
+                <div class="panel-body">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Lugar de nacimiento</div>
+                    <div class="panel-body">
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="id_dep">Departamento</label>
+                          <input type="text" class="form-control" id="id_dep" readonly="readonly"
+                                 v-model="paciente.attributes.etnia"/>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="id_pro">Provincia</label>
+                          <input type="text" class="form-control" id="id_pro" readonly="readonly"
+                                 v-model="paciente.attributes.etnia"/>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="id_dis">Distrito</label>
+                          <input type="text" class="form-control" id="id_dis" readonly="readonly"
+                                 v-model="paciente.attributes.etnia"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="resi">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Residencia actual</div>
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label for="id_par">Pais</label>
+                                <input type="text" class="form-control" id="id_par">
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label for="id_depr">Departamento</label>
+                                <input type="text" class="form-control" id="id_depr">
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label for="id_pror">Provincia</label>
+                                <input type="text" class="form-control" id="id_pror">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="form-group">
+                                <label for="id_distr">Distrito</label>
+                                <input type="text" class="form-control" id="id_distr">
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group">
+                                <label for="id_cen_por">Centro Poblado</label>
+                                <input type="text" class="form-control" id="id_cen_por">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-9">
+                              <div class="form-group">
+                                <label for="id_dir">Dirección</label>
+                                <input type="text" class="form-control" id="id_dir">
+                              </div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="form-group">
+                                <label for="id_act_dir">Actualizar Dirección</label>
+                                <input type="checkbox" class="form-control" id="id_act_dir">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="form-group">
+                                <label for="id_sector">Sector/Localidad</label>
+                                <select type="text" class="form-control" id="id_sector">
+                                  <option>Ciudad</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="form-group">
+                                <label for="id_ti_re">Tiempo Residencia</label>
+                                <input type="text" class="form-control" id="id_ti_re">
+                              </div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="form-group">
+                                <label>&nbsp;</label>
+                                <select type="text" class="form-control" id="id_mes">
+                                  <option>Meses</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Georeferenciación</div>
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="form-group">
+                                <label for="id_ti_re">Indique una referencia</label>
+                                <input type="text" class="form-control" id="id_referencia">
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div id="map"></div>
+                              <input type="hidden" id="us2-lat"/>
+                              <input type="hidden" id="us2-lon"/>
+                              <input type="hidden" id="us2-radius"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="text-right">
+                    <button class="btn btn-primary" type="submit"><span class="fa fa-save"></span>Guardar
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="contactos">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Contactos del paciente</div>
+                      <div class="panel-body">
+                        <div class="col-lg-12">
+                          <div class="form-horizontal">
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Numero de Doc.</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" id="id_txt_par_doc"/>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Nombre y Apellidos</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" id="id_txt_par_nomape"/>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Parentesco</label>
+                              <div class="col-sm-8">
+                                <select id="id_pac_parent" class="form-control">
+                                  <option>Padre</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Num. Cel.</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" id="id_txt_par_cel"/>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Correo Electrónico</label>
+                              <div class="col-sm-8">
+                                <input type="email" class="form-control" id="id_txt_par_email"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <table class="table">
+                            <thead>
+                            <tr>
+                              <th>&nbsp;</th>
+                              <th>Nombre y Apellidos</th>
+                              <th>Parentesco</th>
+                              <th>Num. Celular</th>
+                              <th>Correo Electrónico</th>
+                              <th>Dirección</th>
+                              <th>Acción</th>
+                            </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock container %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src='https://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+  <script src="{% static "js/locationpicker.jquery.js" %}"></script>
+  <script src="{% static "js/afiliacion/paciente.js" %}"></script>
+  <script src="{% static 'js/afiliacion/editar.js' %}"></script>
+{% endblock javascript %}

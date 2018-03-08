@@ -1,0 +1,66 @@
+[
+{
+  "model": "afiliacion.poblacion",
+  "pk": 1,
+  "fields": {
+    "denominacion": "PG \u2013 Poblaci\u00f3n General",
+    "movil": false
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 2,
+  "fields": {
+    "denominacion": "Trans-F \u2013 Mujeres Transg\u00e9nero",
+    "movil": true
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 3,
+  "fields": {
+    "denominacion": "Trans-M \u2013 Hombres Transg\u00e9nero",
+    "movil": false
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 4,
+  "fields": {
+    "denominacion": "HSH \u2013 Hombres que tienen sexo con otros hombres",
+    "movil": true
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 5,
+  "fields": {
+    "denominacion": "TS-HSH \u2013 Hombres que tienen sexo con otros hombres que realizan trabajo sexual",
+    "movil": false
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 6,
+  "fields": {
+    "denominacion": "TS-Trans \u2013 Mujeres trans que hacen trabajo sexual",
+    "movil": false
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 7,
+  "fields": {
+    "denominacion": "TS-F \u2013 Trabajadoras sexuales femeninas",
+    "movil": false
+  }
+},
+{
+  "model": "afiliacion.poblacion",
+  "pk": 8,
+  "fields": {
+    "denominacion": "PPL \u2013 Privado de libertad",
+    "movil": false
+  }
+}
+]

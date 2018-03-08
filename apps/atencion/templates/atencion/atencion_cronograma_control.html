@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Atención - paciente{% endblock %}
+{% block container %}
+  <div class="row">
+    <form method="post">
+      {% csrf_token %}
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Atención - Datos del Paciente</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <h4>Servicio (UPS): {{ ups }}</h4>
+              </div>
+              <div class="col-lg-6">
+                <h4>Profesional : {{ user.full_name }}</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <h4>Paciente : {{ paciente.nombre_completo }}</h4>
+              </div>
+              <div class="col-lg-3">
+                <h4>Edad : {{ paciente.edad }}</h4>
+              </div>
+              <div class="col-lg-3">
+                <h4>Sexo : {{ paciente.get_genero_display }}</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                Diagnóstico (Dx)
+              </div>
+              <div class="col-lg-4">
+                {{ diagnostico }}
+              </div>
+              <div class="col-lg-6">
+                <form action="" method="post">
+                  {% if not cronograma %}
+                    <button class="btn btn-primary" type="submit" name="btnGenerarCronograma">Generar Cronograma
+                    </button>
+                  {% endif %}
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                Tipo Diagnóstico
+              </div>
+              <div class="col-lg-4">
+                {{ tipo }}
+              </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+              <div class="col-lg-2">
+                Fecha Dx:
+              </div>
+              <div class="col-lg-4">
+                {% now 'd/m/Y' %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Frecuecnia de Control y Exámenes Complementarios
+          </div>
+          <div class="panel-body" style="font-size: 10px;">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                  <td>#</td>
+                  {% for f in frecuencias %}
+                    <td>
+                      {{ f }}
+                      {{ cronograma.0.detalle_frecuencia.0.0 }}
+                    </td>
+                  {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for c in controles %}
+                  <tr>
+                    <td class="col-lg-3">{{ c }}</td>
+                    {% for f in frecuencias %}
+                      <td>
+                        {% for cro in cronograma.0.detalle_frecuencia %}
+                          {% if cro.frecuencia == f and cro.control == c %}
+                            {{ cro.fecha_programada|date:'d/m/Y' }}
+                          {% endif %}
+                        {% endfor %}
+                      </td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel-footer">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}

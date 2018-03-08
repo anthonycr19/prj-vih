@@ -1,0 +1,49 @@
+{% load form_tags static %}
+{% load static %}
+
+{% block container %}
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title">Buscar Datos del Familiar</h4>
+</div>
+<div class="modal-body">
+  <div class="input-group">
+
+    <input type="text" class="form-control col-md-2" id="dni_buscar" name="dni_buscar" placeholder="Nro de documento" autofocus="autofocus">
+    <input type="hidden" name="id_paciente_buscar" id="id_paciente_buscar" value="{{ id_paciente }}">
+    <span class="input-group-btn">
+      <button class="btn btn-primary buscar" name="btn_buscar" id="btn_buscar"  type="button"><span class="fa fa-search"></span>Buscar</button>
+    </span>
+  </div >
+  <div id="datos_crear_contactofamilia">
+    <div id="buscando-contacto" class="col-md-12">
+      <div class="col-md-12" style="text-align: center;">
+        Buscando el Número DNI, Espere porfavor
+      </div>
+      <div class="col-md-12" style="text-align: center;">
+        <img id="imgLoadingCall" src="/static/img/loading01.gif" style="width: 150px; height: 50px;">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+</div>
+{% endblock %}
+
+{% block javascript %}
+  <script>
+  $(document).ready(function () {
+    $('#buscando-contacto').hide();
+    $('#btn_buscar').click(function() {
+      $('#buscando-contacto').show();
+      var $dni = $('#dni_buscar');
+      var $id_paciente = $('#id_paciente_buscar');
+
+      $.get('/afiliacion/resultado-buscar-familia-paciente', {'dni': $dni.val(), 'id_paciente': $id_paciente.val()}, function(data) {
+        $('#datos_crear_contactofamilia').html(data);
+      });
+    });
+  });
+  </script>
+{% endblock %}

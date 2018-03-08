@@ -1,0 +1,42 @@
+[
+{
+  "model": "atencion.examenfisico",
+  "pk": 1,
+  "fields": {
+    "descripcion": "Piel",
+    "estado": 1
+  }
+},
+{
+  "model": "atencion.examenfisico",
+  "pk": 2,
+  "fields": {
+    "descripcion": "Cabeza y Cuello",
+    "estado": 1
+  }
+},
+{
+  "model": "atencion.examenfisico",
+  "pk": 3,
+  "fields": {
+    "descripcion": "Sistema Linf\u00e1tico",
+    "estado": 1
+  }
+},
+{
+  "model": "atencion.examenfisico",
+  "pk": 4,
+  "fields": {
+    "descripcion": "Sistema Genitourinario",
+    "estado": 1
+  }
+},
+{
+  "model": "atencion.examenfisico",
+  "pk": 5,
+  "fields": {
+    "descripcion": "Sistema Nervioso",
+    "estado": 1
+  }
+}
+]

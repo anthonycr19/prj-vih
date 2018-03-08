@@ -1,0 +1,90 @@
+[
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 20,
+  "fields": {
+    "nombre": "Losa deportiva",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 21,
+  "fields": {
+    "nombre": "Sal\u00f3n de bellez",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 22,
+  "fields": {
+    "nombre": "Discoteca",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 23,
+  "fields": {
+    "nombre": "Bar",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 24,
+  "fields": {
+    "nombre": "Casa",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 25,
+  "fields": {
+    "nombre": "Zona de trabajo",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 26,
+  "fields": {
+    "nombre": "Parque",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 27,
+  "fields": {
+    "nombre": "Sauna",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 28,
+  "fields": {
+    "nombre": "Sal\u00f3n de video",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 29,
+  "fields": {
+    "nombre": "Calle",
+    "estado": true
+  }
+},
+{
+  "model": "afiliacion.lugarabordaje",
+  "pk": 30,
+  "fields": {
+    "nombre": "Otro",
+    "estado": true
+  }
+}
+]

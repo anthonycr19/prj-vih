@@ -1,0 +1,34 @@
+<div id="resultado_eliminacion"> </div>
+
+{% for familia in familiares %}
+  <tr id="form_familia_{{ familia.id }}" >
+    <td></td>
+    <td><center>{{ familia.numero_documento }}</center></td>
+    <td><center>{{ familia.get_parentesco_display }}</center></td>
+    <td><center>{{ familia.nombre_completo }}</center></td>
+    <td><center>{{ familia.celular }}</center></td>
+    <td><center>{{ familia.correo }}</center></td>
+    <td><center>
+      <a class="btn btn-small btn-danger" onclick="eliminar_familia('{{ familia.id }}');"><i class="fa fa-times" aria-hidden="true"></i></a>
+    </center></td>
+
+  </tr>
+{% endfor %}
+
+{% block javascript %}
+  <script>
+  function eliminar_familia(id){
+
+    $('#form_familia_'+id).hide();
+    $.ajax({
+      url: '/afiliacion/eliminar-datos-familia/'+id,
+      success: function(data) {
+          $('#resultado_eliminacion').html(data);
+          setTimeout(function() {
+            $('#resultado_eliminacion').hide();
+          }, 2000);
+      }
+    });
+  }
+  </script>
+{% endblock %}

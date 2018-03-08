@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Buscar pacientes{% endblock %}
+
+{% block css %}
+  <link href="{% static 'css/apps.css' %}" rel='stylesheet'/>
+{% endblock css %}
+
+
+{% block container %}
+
+{% include 'afiliacion/partials/buscar_cita.html' with accion='<a class="btn btn-success" v-bind:href="url_crearconsejeriapost+cita.uuid_cita" v-bind="{id: cita.uuid_cita}" on:click="vm.mostrarFormulario($event)">Consejeria Post-Test</a>' %}
+{% endblock %}
+{% block javascript %}
+  {% include 'dashboard/conf.html' %}
+  <script src="{% static "js/afiliacion/citas.js" %}"></script>
+  <script src="{% static "js/consejeria/consejeria_post.js" %}"></script>
+{% endblock javascript %}

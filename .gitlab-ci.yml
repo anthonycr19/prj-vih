@@ -1,0 +1,7 @@
+image: python:3.6
+lint:
+    stage: test
+    script:
+        - pip install flake8==3.0.4
+        - pip install pep8-naming==0.4.1
+        - flake8 .

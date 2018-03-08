@@ -1,0 +1,72 @@
+<div id="md_registro_resultados" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Laboratorio - Registro de resultados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Datos de la atención</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <table class="table table-responsive">
+                      <thead>
+                      <tr>
+                        <th>N°</th>
+                        <th>Nombre de Prueba</th>
+                        <th>Fecha Solicitud</th>
+                        <th>Resultados</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr v-for="(examen, index) in examenes_solicitados">
+                        <td>[[ index + 1 ]]</td>
+                        <td>[[ examen.cpt_data.denominacion_procedimiento ]]</td>
+                        <td>[[ examen.fecha ]]</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#md_form_resultados" v-on:click="getExamen(examen_resultado)">Registrar</button></td>
+                        <td>
+                        <table class="table table-responsive">
+                          <thead>
+                            <th>N° Muestra</th>
+                            <th>Fecha Resultado</th>
+                            <th>Resultado</th>
+                            <th>Estado</th>
+                            <th>Observación</th>
+                            <th></th>
+                          </thead>
+                          <tbody>
+                            <tr v-for="(examen_resultado, index2) in examen.resultados">
+                              <td>[[ examen_resultado.nro_muestra ]]</td>
+                              <td>[[ examen_resultado.fecha_prueba ]]</td>
+                              <td>[[ examen_resultado.resultado ]]</td>
+                              <td>[[ examen_resultado.estado_display ]]</td>
+                              <td>[[ examen_resultado.observaciones ]]</td>
+                              <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#md_form_resultados" v-on:click="getExamen(examen_resultado)" v-if="examen_resultado.resultado">Editar</button>
+                                  <button type="button" class="btn btn-success">Imprimir</button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

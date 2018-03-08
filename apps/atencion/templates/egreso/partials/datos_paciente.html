@@ -1,0 +1,59 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Datos Paciente</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="control-label">
+            Servicio (UPS)
+          </label>
+          <div class="controls">
+            {{ ups }}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="form-group">
+          <label class="control-label">
+            Profesional
+          </label>
+          <div class="controls">
+            {{ user.full_name }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="control-label">
+            Paciente
+          </label>
+          <div class="controls">
+            {{ paciente.nombre_completo }}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="control-label">
+            Edad
+          </label>
+          <div class="controls">
+            {{ paciente.edad_str }}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="control-label">
+            Sexo
+          </label>
+          <div class="controls">
+            {{ paciente.get_sexo_display }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
